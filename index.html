@@ -1,420 +1,871 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" class="no-js" data-theme="dark">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Muhammad Zhafran Tsany — SEO Strategist &amp; Automation Builder</title>
-<meta name="description" content="SEO strategist and automation builder from Bekasi, Indonesia. Three years of organic growth across Southeast Asia, Australia and the US — plus n8n pipelines, Next.js dashboards and programmatic SEO systems.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Muhammad Zhafran Tsany · SEO Strategist &amp; Automation Builder</title>
+<meta name="description" content="SEO strategist and automation builder from Bekasi, Indonesia. Three years of organic growth across Southeast Asia, Australia and the US, plus programmatic SEO engines, n8n pipelines and Next.js dashboards.">
 <meta name="author" content="Muhammad Zhafran Tsany">
 <link rel="canonical" href="https://zhafrantsanyy.github.io/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Muhammad Zhafran Tsany — SEO Strategist &amp; Automation Builder">
-<meta property="og:description" content="Three years of organic growth across SEA, Australia and the US — plus automation pipelines and internal tools that ship.">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Muhammad Zhafran Tsany">
+<meta property="og:title" content="Muhammad Zhafran Tsany · SEO Strategist &amp; Automation Builder">
+<meta property="og:description" content="Organic growth, engineered. Nine case studies, a live content-engine simulation and the tools I have shipped.">
 <meta property="og:url" content="https://zhafrantsanyy.github.io/">
 <meta property="og:image" content="https://zhafrantsanyy.github.io/assets/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Muhammad Zhafran Tsany — SEO Strategist and Automation Builder">
+<meta property="og:image:alt" content="Muhammad Zhafran Tsany: Organic growth, engineered.">
+<meta property="profile:first_name" content="Muhammad Zhafran">
+<meta property="profile:last_name" content="Tsany">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muhammad Zhafran Tsany · SEO Strategist &amp; Automation Builder">
+<meta name="twitter:description" content="Organic growth, engineered. Nine case studies, a live content-engine simulation and the tools I have shipped.">
 <meta name="twitter:image" content="https://zhafrantsanyy.github.io/assets/img/og.jpg">
-<meta name="theme-color" content="#070B14">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0B0C0A">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/img/zhafran.webp" as="image" type="image/webp">
-<link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="me" href="https://github.com/zhafrantsanyy">
+<link rel="me" href="https://www.linkedin.com/in/zhafran-tsany">
+<link rel="preload" href="assets/fonts/bricolage-grotesque-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
+<script>
+/* Runs before first paint: theme, motion preference and the js flag. */
+(function () {
+  var d = document.documentElement, t = null, m = null;
+  d.classList.remove('no-js'); d.classList.add('js');
+  try { t = localStorage.getItem('zt-theme'); m = localStorage.getItem('zt-motion'); } catch (e) {}
+  if (t !== 'light' && t !== 'dark') t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  d.setAttribute('data-theme', t);
+  if (m === 'off') d.setAttribute('data-motion', 'off');
+  if (m === 'off' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('rm');
+  document.querySelector('meta[name="theme-color"]').setAttribute('content', t === 'light' ? '#F1F0E9' : '#0B0C0A');
+  /* If the main script never runs, show everything rather than a half-animated page. */
+  setTimeout(function () { if (!window.__zt) d.classList.remove('js'); }, 4000);
+})();
+</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Muhammad Zhafran Tsany","alternateName":"Zhafran","jobTitle":"SEO Strategist","email":"mailto:zhafrantsanyy@gmail.com","url":"https://zhafrantsanyy.github.io/","address":{"@type":"PostalAddress","addressLocality":"Bekasi","addressCountry":"ID"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Universitas Pendidikan Indonesia"},"image":"https://zhafrantsanyy.github.io/assets/img/zhafran-square.jpg","sameAs":["https://github.com/zhafrantsanyy","https://www.linkedin.com/in/zhafran-tsany"],"knowsAbout":["Search Engine Optimization","Programmatic SEO","Marketing Automation","n8n","Next.js","Data Pipelines"]}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "https://zhafrantsanyy.github.io/#page",
+      "url": "https://zhafrantsanyy.github.io/",
+      "name": "Muhammad Zhafran Tsany · SEO Strategist & Automation Builder",
+      "dateModified": "2026-09-27",
+      "inLanguage": "en",
+      "mainEntity": { "@id": "https://zhafrantsanyy.github.io/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://zhafrantsanyy.github.io/#person",
+      "name": "Muhammad Zhafran Tsany",
+      "alternateName": "Zhafran",
+      "jobTitle": "SEO Strategist",
+      "description": "SEO strategist and automation builder with three years of organic growth work across Southeast Asia, Australia and the United States.",
+      "email": "mailto:zhafrantsanyy@gmail.com",
+      "url": "https://zhafrantsanyy.github.io/",
+      "image": "https://zhafrantsanyy.github.io/assets/img/zhafran-square.jpg",
+      "address": { "@type": "PostalAddress", "addressLocality": "Bekasi", "addressCountry": "ID" },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universitas Pendidikan Indonesia" },
+      "knowsLanguage": ["id", "en"],
+      "knowsAbout": ["Search Engine Optimization", "Technical SEO", "Programmatic SEO", "Content Localization", "Marketing Automation", "n8n", "Next.js", "Supabase", "Data Pipelines"],
+      "sameAs": ["https://github.com/zhafrantsanyy", "https://www.linkedin.com/in/zhafran-tsany"]
+    }
+  ]
+}
 </script>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-<canvas id="bgCanvas" aria-hidden="true"></canvas>
-<div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
 
-<header class="nav" id="nav">
-  <div class="wrap nav-inner">
-    <a class="brand" href="#top">
-      <span class="brand-mark">MZ</span>
-      <span class="brand-text">Zhafran<span class="dot">.</span></span>
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.6A8.2 8.2 0 1 1 9.4 4a6.6 6.6 0 0 0 10.6 10.6Z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 6.5v11M15 6.5v11"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8.5 6.2v11.6L18 12z"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11" height="11" rx="2.2"/><path d="M15.5 8.5V6.7a2.2 2.2 0 0 0-2.2-2.2H6.7a2.2 2.2 0 0 0-2.2 2.2v6.6a2.2 2.2 0 0 0 2.2 2.2h1.8"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7.5 8.5 6 8.5-6"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2 4.6 1.2V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.6l1.2 4.6-2.2 2.2Z"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3.5"/><path d="M8 10.5V17M8 7.2v.01M12 17v-3.8a2.2 2.2 0 0 1 4.4 0V17M12 10.5V17"/></symbol>
+  <symbol id="i-gh" viewBox="0 0 24 24"><path d="M9 19c-4 1.4-4-2.2-6-2.8m12 5v-3.4a3 3 0 0 0-.9-2.3c2.9-.3 6-1.4 6-6.4a4.7 4.7 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.3s-1.1-.3-3.5 1.3a12 12 0 0 0-6.4 0C6.4 2.3 5.3 2.6 5.3 2.6a4.3 4.3 0 0 0-.1 3.3A4.7 4.7 0 0 0 3.9 9.1c0 5 3.1 6.1 6 6.4a3 3 0 0 0-.9 2.3V21"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"><span id="progress"></span></div>
+
+<!-- ============================ HEADER ============================ -->
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="logo" href="#top" aria-label="Zhafran Tsany, back to top">
+      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9"/><path d="M7.5 22.5 13 17l4 3 7.5-9"/><circle cx="24.5" cy="11" r="2.3"/></svg>
+      <span class="logo-word">Zhafran Tsany</span>
     </a>
-    <nav class="nav-links" id="navLinks" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#impact">Impact</a>
-      <a href="#contact">Contact</a>
-      <a class="btn btn-sm btn-primary nav-cta" href="assets/docs/Muhammad-Zhafran-Tsany-CV.pdf" download>Download CV</a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="#about" data-nav>About</a></li>
+        <li><a href="#work" data-nav>Work</a></li>
+        <li><a href="#engine" data-nav>Engine</a></li>
+        <li><a href="#experience" data-nav>Experience</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+      </ul>
     </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-      <span></span><span></span><span></span>
-    </button>
+
+    <div class="hdr-tools">
+      <button class="search-btn" type="button" data-palette aria-label="Search this site" aria-keyshortcuts="Control+K Meta+K">
+        <svg class="i"><use href="#i-search"/></svg><span class="search-txt">Search</span><kbd class="kbd" data-kbd>Ctrl K</kbd>
+      </button>
+      <button class="tool" type="button" data-motion-toggle aria-pressed="false" aria-label="Pause animations" title="Pause animations">
+        <svg class="i i-pause"><use href="#i-pause"/></svg><svg class="i i-play"><use href="#i-play"/></svg>
+      </button>
+      <button class="tool" type="button" data-theme-toggle aria-label="Switch colour theme" title="Switch colour theme">
+        <svg class="i i-sun"><use href="#i-sun"/></svg><svg class="i i-moon"><use href="#i-moon"/></svg>
+      </button>
+      <a class="btn btn-sm btn-solid hdr-cv" href="assets/docs/Muhammad-Zhafran-Tsany-CV.pdf" download><span class="roll" data-roll>Download CV</span></a>
+      <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
+<!-- Mobile menu -->
+<div class="menu" id="menu" hidden>
+  <nav class="menu-nav" aria-label="Mobile">
+    <ol>
+      <li><a href="#about"><span>02</span>About</a></li>
+      <li><a href="#work"><span>03</span>Work</a></li>
+      <li><a href="#engine"><span>04</span>Engine</a></li>
+      <li><a href="#shipped"><span>05</span>Shipped</a></li>
+      <li><a href="#experience"><span>06</span>Experience</a></li>
+      <li><a href="#contact"><span>09</span>Contact</a></li>
+    </ol>
+  </nav>
+  <div class="menu-foot">
+    <div class="menu-tools">
+      <button class="tool" type="button" data-palette><svg class="i"><use href="#i-search"/></svg><span>Search</span></button>
+      <button class="tool" type="button" data-theme-toggle><svg class="i i-sun"><use href="#i-sun"/></svg><svg class="i i-moon"><use href="#i-moon"/></svg><span>Theme</span></button>
+      <button class="tool" type="button" data-motion-toggle aria-pressed="false"><svg class="i i-pause"><use href="#i-pause"/></svg><svg class="i i-play"><use href="#i-play"/></svg><span>Motion</span></button>
+    </div>
+    <a class="btn btn-solid" href="assets/docs/Muhammad-Zhafran-Tsany-CV.pdf" download>Download CV <svg class="i"><use href="#i-down"/></svg></a>
+    <p class="mono">zhafrantsanyy@gmail.com</p>
+  </div>
+</div>
+
 <main id="main">
-<span id="top"></span>
 
-<!-- ============ HERO ============ -->
-<section class="hero" id="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow reveal"><span class="pulse"></span> Available for SEO leadership &amp; growth engineering roles</p>
-      <h1 class="reveal">
-        <span class="h1-line">Muhammad</span>
-        <span class="h1-line grad">Zhafran Tsany</span>
-      </h1>
-      <p class="role reveal">
-        <span class="role-static">I build</span>
-        <span class="role-rotate" id="roleRotate" aria-live="polite"><span>organic growth systems</span></span>
-      </p>
-      <p class="lead reveal">Three years of architecting search frameworks across Southeast Asia, Australia and the United States — and building the automation that makes them run without me. SEO strategy on one side, n8n pipelines and Next.js dashboards on the other.</p>
-      <div class="hero-actions reveal">
-        <a class="btn btn-primary magnetic" href="#projects">View projects <svg viewBox="0 0 24 24" class="i"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-ghost magnetic" href="assets/docs/Muhammad-Zhafran-Tsany-CV.pdf" download>Download CV</a>
-        <button class="btn btn-quiet" id="copyMail" data-mail="zhafrantsanyy@gmail.com">
-          <svg viewBox="0 0 24 24" class="i"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-          <span>zhafrantsanyy@gmail.com</span>
-        </button>
-      </div>
-      <ul class="hero-meta reveal">
-        <li><svg viewBox="0 0 24 24" class="i"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg> Bekasi, Indonesia</li>
-        <li><svg viewBox="0 0 24 24" class="i"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg> ID · SG · AU · VN · PH · US</li>
-        <li><svg viewBox="0 0 24 24" class="i"><path d="M4 19V5M4 19h16"/><path d="M8 16V11M12 16V8M16 16v-3"/></svg> ~3 years experience</li>
-      </ul>
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="top" aria-labelledby="heroTitle">
+  <canvas class="hero-canvas" id="rankCanvas" aria-hidden="true"></canvas>
+  <div class="rank-tip" id="rankTip" aria-hidden="true"></div>
+
+  <div class="wrap hero-in">
+    <div class="hero-meta" data-intro="1">
+      <span class="mono">(01) Portfolio · 2026 edition</span>
+      <span class="status"><i class="pulse"></i>Available for SEO leadership roles</span>
+      <span class="mono hero-clock">Bekasi, ID <time data-clock>07:00</time> WIB</span>
     </div>
 
-    <aside class="hero-card reveal" data-tilt>
-      <div class="hc-glow"></div>
-      <figure class="hc-photo">
-        <picture>
-          <source srcset="assets/img/zhafran.webp" type="image/webp">
-          <img src="assets/img/zhafran.jpg" alt="Muhammad Zhafran Tsany" width="880" height="660" decoding="async">
-        </picture>
-        <figcaption>
-          <p class="hc-name">Zhafran</p>
-          <p class="hc-sub">SEO Strategist · Automation Builder</p>
-        </figcaption>
-      </figure>
-      <dl class="hc-stats">
-        <div><dt>Visitors driven</dt><dd><span class="count" data-to="1" data-decimals="0" data-suffix="M+">0</span></dd></div>
-        <div><dt>Keywords at #1</dt><dd><span class="count" data-to="280" data-suffix="+">0</span></dd></div>
-        <div><dt>Markets served</dt><dd><span class="count" data-to="6">0</span></dd></div>
-        <div><dt>Verticals</dt><dd><span class="count" data-to="7">0</span></dd></div>
-      </dl>
-      <div class="hc-foot">
-        <span class="chip">SEO</span><span class="chip">Programmatic SEO</span><span class="chip">n8n</span><span class="chip">Next.js</span><span class="chip">Supabase</span>
+    <h1 class="hero-title" id="heroTitle">
+      <span class="hero-name" data-split>Muhammad Zhafran Tsany</span><span class="sr">: </span>
+      <span class="hero-tag" data-split>Organic growth, <em>engineered.</em></span>
+    </h1>
+
+    <div class="hero-row">
+      <p class="hero-lead" data-intro="2">SEO strategist and automation builder from Bekasi, Indonesia. Three years growing organic search across six markets, and building the programmatic engines, n8n pipelines and dashboards that keep it growing.</p>
+      <div class="hero-cta" data-intro="3">
+        <a class="btn btn-solid btn-lg" href="#work" data-magnetic><span class="roll" data-roll>See the work</span><svg class="i"><use href="#i-arrow"/></svg></a>
+        <button class="btn btn-line btn-lg" type="button" data-palette><svg class="i"><use href="#i-search"/></svg><span class="roll" data-roll>Search this site</span></button>
       </div>
-    </aside>
+    </div>
+
+    <dl class="hero-stats" data-intro="4">
+      <div><dt>Visitors driven via SEO</dt><dd><span class="odo" data-odo>1M+</span></dd></div>
+      <div><dt>Keywords ranked #1</dt><dd><span class="odo" data-odo>280+</span></dd></div>
+      <div><dt>Impressions in month one</dt><dd><span class="odo" data-odo>432K</span></dd></div>
+      <div><dt>Markets served</dt><dd><span class="odo" data-odo>6</span></dd></div>
+    </dl>
   </div>
-  <a class="scroll-hint" href="#about" aria-label="Scroll down"><span></span></a>
+  <p class="hero-legend mono" aria-hidden="true"><span class="legend-line"></span>Stylised rank tracker · every line is a keyword cluster from my case studies · hover one</p>
 </section>
 
-<!-- ============ ABOUT ============ -->
-<section class="section" id="about">
+<!-- ============================ MARQUEE ============================ -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq" data-marquee="1">
+    <div class="mq-track">
+      <span>Technical SEO</span><i>✳</i><span>Programmatic SEO</span><i>✳</i><span>n8n automation</span><i>✳</i><span>Keyword research</span><i>✳</i><span>E-E-A-T</span><i>✳</i><span>Next.js</span><i>✳</i><span>Supabase</span><i>✳</i><span>Local SEO</span><i>✳</i><span>GA4 &amp; GTM</span><i>✳</i><span>Link building</span><i>✳</i>
+    </div>
+  </div>
+  <div class="mq mq-alt" data-marquee="-1">
+    <div class="mq-track">
+      <span>Indonesia</span><i>●</i><span>Singapore</span><i>●</i><span>Australia</span><i>●</i><span>Vietnam</span><i>●</i><span>Philippines</span><i>●</i><span>United States</span><i>●</i><span>Seven verticals</span><i>●</i><span>Five languages</span><i>●</i>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ ABOUT ============================ -->
+<section class="sec about" id="about" aria-labelledby="aboutTitle">
   <div class="wrap">
-    <p class="kicker reveal"><span>01</span> About</p>
-    <h2 class="reveal">Search strategy on one side,<br><span class="grad">systems that run it</span> on the other.</h2>
+    <p class="sec-label" data-reveal><span>(02)</span>About</p>
+    <div class="statement" data-lit>
+      <h2 id="aboutTitle">An SEO strategist who builds the <em>systems</em> behind the rankings.</h2>
+      <p>When the bottleneck is rankings, I fix the content and the site. When it is operations, I build: content engines that write, check and publish on their own, pipelines that report at 07:00, and dashboards teams <em>actually open.</em></p>
+    </div>
+
     <div class="about-grid">
-      <div class="about-copy reveal">
-        <p>I'm an SEO specialist with roughly three years of professional experience driving organic growth across Southeast Asia, Australia and the United States. My work spans the full lifecycle — strategy, keyword research, content optimization, technical SEO and link acquisition — applied across travel, ERP, agriculture, education, healthcare, fintech and consumer markets.</p>
-        <p>Most recently I led end-to-end SEO across five business units at Adna Group and built programmatic content engines that draft, quality-check and publish on their own. Before that I supported multi-market SEO at Traveloka, researching 200+ keywords and optimizing 150+ pieces of content every month across four countries.</p>
-        <p>The repositories below are the other half of that story: the pipelines, dashboards and internal tools I build when the bottleneck turns out to be operations rather than rankings.</p>
+      <figure class="portrait" data-reveal="clip">
+        <div class="portrait-frame">
+          <picture>
+            <source srcset="assets/img/zhafran-portrait.webp" type="image/webp">
+            <img src="assets/img/zhafran-portrait.jpg" alt="Portrait of Muhammad Zhafran Tsany, smiling, in a black t-shirt" width="528" height="660" decoding="async" fetchpriority="low" data-parallax>
+          </picture>
+        </div>
+        <figcaption class="mono"><span>Zhafran</span><span>Bekasi, ID</span></figcaption>
+      </figure>
+
+      <div class="about-copy">
+        <p data-reveal>I'm an SEO specialist with roughly three years of professional experience driving organic growth across Southeast Asia, Australia and the United States. The work spans the full lifecycle: strategy, keyword research, content optimization, technical SEO and link acquisition, across travel, ERP, agriculture, education, healthcare, fintech and consumer markets.</p>
+        <p data-reveal>Most recently I led SEO end to end across five business units at Adna Group and built programmatic content engines that draft, quality-check and publish on their own. Before that I supported multi-market SEO at Traveloka, researching <mark class="hl">200+ keywords</mark> and optimizing <mark class="hl">150+ pieces of content</mark> every month across four countries.</p>
+        <dl class="facts" data-stagger>
+          <div><dt>Based in</dt><dd>Bekasi, Indonesia</dd></div>
+          <div><dt>Focus</dt><dd>SEO, content and automation</dd></div>
+          <div><dt>Markets</dt><dd>ID · SG · AU · VN · PH · US</dd></div>
+          <div><dt>Education</dt><dd>B.Bus Digital Business, UPI · GPA 3.73, Cum Laude</dd></div>
+          <div><dt>Languages</dt><dd>Indonesian, English</dd></div>
+          <div><dt>Recognition</dt><dd>COMPFEST 2022 finalist</dd></div>
+        </dl>
       </div>
-      <div class="skills reveal">
-        <div class="skill-group">
-          <h3>Search</h3>
-          <ul><li>Technical SEO</li><li>Keyword research</li><li>Programmatic SEO</li><li>On-page &amp; content</li><li>Link building</li><li>Local SEO</li></ul>
+    </div>
+
+    <div class="skills" data-stagger>
+      <div class="skill">
+        <h3><span class="mono">S/01</span>Search</h3>
+        <ul><li>Technical SEO</li><li>Keyword research</li><li>Programmatic SEO</li><li>On-page &amp; content</li><li>Link building</li><li>Local SEO</li><li>E-E-A-T</li></ul>
+      </div>
+      <div class="skill">
+        <h3><span class="mono">S/02</span>Build</h3>
+        <ul><li>n8n</li><li>Next.js</li><li>React</li><li>TypeScript</li><li>Supabase</li><li>HTML/CSS</li><li>AWS</li><li>Cloud architecture</li></ul>
+      </div>
+      <div class="skill">
+        <h3><span class="mono">S/03</span>Growth</h3>
+        <ul><li>Google Ads</li><li>Meta Ads</li><li>GA4 &amp; GTM</li><li>Conversion optimization</li><li>KOL outreach</li><li>Data analysis</li><li>Campaign strategy</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ WORK ============================ -->
+<section class="sec work" id="work" aria-labelledby="workTitle">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-label" data-reveal><span>(03)</span>Selected work</p>
+      <h2 class="sec-title" id="workTitle" data-split>Nine brands. Nine different <em>search results.</em></h2>
+      <p class="sec-lead" data-reveal>Case studies across travel, ERP, agriculture, education, healthcare, fintech, F&amp;B and consumer markets. A different audience, a different SERP and a different goal every time.</p>
+    </div>
+
+    <div class="cases-head mono" aria-hidden="true"><span>#</span><span>Client</span><span>Sector</span><span>Headline result</span></div>
+    <ol class="cases" id="cases">
+
+      <li class="case" id="case-gotrade" data-case="gotrade">
+        <button class="case-row" type="button" aria-haspopup="dialog">
+          <span class="case-idx mono">01</span>
+          <span class="case-name">Gotrade</span>
+          <span class="case-sector">Fintech · Programmatic SEO</span>
+          <span class="case-metric">Every article quality-gated</span>
+          <span class="case-go" aria-hidden="true"><svg class="i"><use href="#i-out"/></svg></span>
+        </button>
+        <article class="case-body">
+          <p class="case-tags mono">Financial trading · Programmatic SEO · Global</p>
+          <h3 class="case-title">Gotrade</h3>
+          <blockquote class="case-quote"><p>Programmatic content only scales when the quality control is programmatic too. Every article passes the same gate before it ships.</p></blockquote>
+          <div class="case-visual" data-visual="gotrade"></div>
+          <div class="case-cols">
+            <section><h4>The challenge</h4><p>Gotrade competes in financial trading, a YMYL category where Google demands demonstrable expertise and volume alone never ranks. The mandate was a content engine that could produce instrument, market and education pages at scale, where every output still cleared originality and <span class="nw">E-E-A-T</span> standards without a human reading it first.</p></section>
+            <section><h4>The architecture</h4><ol class="case-steps"><li>Keyword and template map: thousands of target queries resolved into a finite set of layouts.</li><li>Programmatic drafting from structured briefs and a controlled source layer.</li><li>An automated quality gate: ZeroGPT originality plus an Ahrefs-driven <span class="nw">E-E-A-T</span> checker. Under threshold means an automatic rewrite.</li><li>Widget generation: instrument cards, price tables and comparison blocks per page.</li><li>An internal link graph mapped at write time.</li><li>CMS publishing, status tracking and refresh cycles as a managed pipeline.</li></ol><p><a class="link" href="#engine" data-close-case>Watch the engine run a simulation</a></p></section>
+          </div>
+          <dl class="outcomes">
+            <div><dt>Pipeline stages, keyword to CMS</dt><dd>06</dd></div>
+            <div><dt>Drafts scored before they ship</dt><dd>100%</dd></div>
+            <div><dt>Rewrite loop under threshold</dt><dd>Auto</dd></div>
+          </dl>
+        </article>
+      </li>
+
+      <li class="case" id="case-tembuni" data-case="tembuni">
+        <button class="case-row" type="button" aria-haspopup="dialog">
+          <span class="case-idx mono">02</span>
+          <span class="case-name">Tembuni</span>
+          <span class="case-sector">Healthcare · Automated publishing</span>
+          <span class="case-metric">432K impressions in month one</span>
+          <span class="case-go" aria-hidden="true"><svg class="i"><use href="#i-out"/></svg></span>
+        </button>
+        <article class="case-body">
+          <p class="case-tags mono">Healthcare · Maternity care · Indonesia</p>
+          <h3 class="case-title">Tembuni</h3>
+          <blockquote class="case-quote"><p>Keyword to published article with no one in the loop, and 432K impressions in the first month the engine was live.</p></blockquote>
+          <div class="case-visual" data-visual="tembuni"></div>
+          <div class="case-cols">
+            <section><h4>The challenge</h4><p>Tembuni is a pro-normal-birth maternity clinic in South Jakarta, competing with national health portals for high-volume pregnancy and childbirth queries. The constraint was never keyword difficulty, it was publishing velocity. The clinic had no content team, so the only way to compete was to make the publishing itself automatic.</p></section>
+            <section><h4>The approach</h4><ul><li>A programmatic keyword map across pregnancy, labour and postpartum question clusters.</li><li>The full drafting pipeline automated: brief, outline, draft and on-page elements per keyword.</li><li>Published straight into the CMS via API, with schema, meta and internal links applied at write time.</li><li>Indexing and CTR data fed back into the queue to prioritise the next batch.</li></ul></section>
+          </div>
+          <dl class="outcomes">
+            <div><dt>Clicks in the first month live</dt><dd>4K</dd></div>
+            <div><dt>Impressions in the first month</dt><dd>432K</dd></div>
+            <div><dt>Articles written and published hands-off</dt><dd>100%</dd></div>
+          </dl>
+        </article>
+      </li>
+
+      <li class="case" id="case-traveloka" data-case="traveloka">
+        <button class="case-row" type="button" aria-haspopup="dialog">
+          <span class="case-idx mono">03</span>
+          <span class="case-name">Traveloka</span>
+          <span class="case-sector">Travel · Multi-market SEA</span>
+          <span class="case-metric">4 markets, 150+ pieces a month</span>
+          <span class="case-go" aria-hidden="true"><svg class="i"><use href="#i-out"/></svg></span>
+        </button>
+        <article class="case-body">
+          <p class="case-tags mono">Travel · Southeast Asia &amp; Australia</p>
+          <h3 class="case-title">Traveloka</h3>
+          <blockquote class="case-quote"><p>Scaling localized search across four markets, where every keyword sits at the intersection of language, culture and travel intent.</p></blockquote>
+          <div class="case-visual" data-visual="traveloka"></div>
+          <div class="case-cols">
+            <section><h4>The challenge</h4><p>Traveloka runs Southeast Asia's leading travel platform, with content competing in Singapore, Australia, Vietnam and the Philippines. Each market has its own language, search behaviour and SERP composition, and at the platform's content velocity, SEO had to scale alongside it.</p></section>
+            <section><h4>The approach</h4><ul><li>Keyword research on 200+ keywords a month across four international markets.</li><li>150+ pieces of content optimized a month, including travel guides and destination pages.</li><li>SERP competitor research and on-page optimization matched to local intent patterns.</li><li>Weekly content planning with editorial, product and engineering teams.</li></ul></section>
+          </div>
+          <dl class="outcomes">
+            <div><dt>Keywords researched monthly</dt><dd>200+</dd></div>
+            <div><dt>Content pieces optimized monthly</dt><dd>150+</dd></div>
+            <div><dt>Markets: SG, AU, VN, PH</dt><dd>04</dd></div>
+          </dl>
+        </article>
+      </li>
+
+      <li class="case" id="case-hashmicro" data-case="hashmicro">
+        <button class="case-row" type="button" aria-haspopup="dialog">
+          <span class="case-idx mono">04</span>
+          <span class="case-name">HashMicro</span>
+          <span class="case-sector">B2B ERP · Singapore</span>
+          <span class="case-metric">~1M visitors, +23% a quarter</span>
+          <span class="case-go" aria-hidden="true"><svg class="i"><use href="#i-out"/></svg></span>
+        </button>
+        <article class="case-body">
+          <p class="case-tags mono">ERP · B2B software · Singapore</p>
+          <h3 class="case-title">HashMicro</h3>
+          <blockquote class="case-quote"><p>A 23% quarterly traffic lift, compounded across a year, was my first lesson in what consistent SEO discipline actually produces.</p></blockquote>
+          <div class="case-visual" data-visual="hashmicro"></div>
+          <div class="case-cols">
+            <section><h4>The challenge</h4><p>HashMicro is a B2B ERP provider serving complex industries with long sales cycles and technical buyers. The goal was to grow organic traffic in a category where intent is high but competition is dense, and where each article had to work as both an SEO asset and a sales touchpoint.</p></section>
+            <section><h4>The approach</h4><ul><li>120+ articles optimized for on-page SEO and content quality.</li><li>Around five qualified backlinks researched and built every day.</li><li>Content planning aligned with product launches and industry verticals.</li><li>Daily technical audits with the UI/UX, frontend and SEM teams.</li></ul></section>
+          </div>
+          <dl class="outcomes">
+            <div><dt>Total visitors driven via SEO</dt><dd>~1M</dd></div>
+            <div><dt>Quarterly traffic growth, sustained</dt><dd>+23%</dd></div>
+            <div><dt>Qualified leads per day from SEO content</dt><dd>10+</dd></div>
+          </dl>
+        </article>
+      </li>
+
+      <li class="case" id="case-superkos" data-case="superkos">
+        <button class="case-row" type="button" aria-haspopup="dialog">
+          <span class="case-idx mono">05</span>
+          <span class="case-name">Superkos</span>
+          <span class="case-sector">Property · Consumer</span>
+          <span class="case-metric">40.7K clicks in 12 months</span>
+          <span class="case-go" aria-hidden="true"><svg class="i"><use href="#i-out"/></svg></span>
+        </button>
+        <article class="case-body">
+          <p class="case-tags mono">Property · Consumer · Indonesia</p>
+          <h3 class="case-title">Superkos</h3>
+          <blockquote class="case-quote"><p>From a quiet start to a steady curve: a year of compounding visibility in a competitive Indonesian property niche.</p></blockquote>
+          <div class="case-visual" data-visual="superkos"></div>
+          <div class="case-cols">
+            <section><h4>The story</h4><p>Superkos works in Indonesian property and home design, where search is dominated by long-tail informational queries with strong local intent. The win came from systematic on-page targeting and content built around specific user goals: affordable design references, room layouts and rental contract templates.</p></section>
+            <section><h4>What moved the curve</h4><ul><li>Long-tail targeting mapped to concrete user goals rather than head terms.</li><li>On-page optimization applied systematically across the content library.</li><li>Templates and references that answer the query outright, earning the click.</li></ul></section>
+          </div>
+          <dl class="outcomes">
+            <div><dt>Total clicks over 12 months</dt><dd>40.7K</dd></div>
+            <div><dt>Total impressions</dt><dd>1.6M</dd></div>
+            <div><dt>Average click-through rate</dt><dd>2.5%</dd></div>
+          </dl>
+        </article>
+      </li>
+
+      <li class="case" id="case-adnafarms" data-case="adnafarms">
+        <button class="case-row" type="button" aria-haspopup="dialog">
+          <span class="case-idx mono">06</span>
+          <span class="case-name">Adnafarms</span>
+          <span class="case-sector">Agriculture · California, US</span>
+          <span class="case-metric">280+ keyword portfolio</span>
+          <span class="case-go" aria-hidden="true"><svg class="i"><use href="#i-out"/></svg></span>
+        </button>
+        <article class="case-body">
+          <p class="case-tags mono">Agriculture · Avocado · California, USA</p>
+          <h3 class="case-title">Adnafarms</h3>
+          <blockquote class="case-quote"><p>A niche US agriculture brand competing on hyperlocal and varietal long-tail, where #1 rankings come from precise intent matching, not volume bets.</p></blockquote>
+          <div class="case-visual" data-visual="adnafarms"></div>
+          <div class="case-cols">
+            <section><h4>The challenge</h4><p>Adnafarms is a California avocado grower targeting buyers who search for specific cultivars, growing regions and farm operations. The opportunity sat in long-tail terms with low difficulty but strong commercial intent, which called for a portfolio approach instead of chasing high-volume head terms.</p></section>
+            <section><h4>The approach</h4><ul><li>A 280+ keyword portfolio focused on long-tail and varietal queries.</li><li>Search intent and SEO difficulty prioritised over raw search volume.</li><li>Blog and farm-location pages optimized for informational and commercial intent.</li><li>SERP feature wins (local pack, image pack) tracked alongside rankings.</li></ul></section>
+          </div>
+          <dl class="outcomes">
+            <div><dt>Keywords actively managed</dt><dd>280+</dd></div>
+            <div><dt>Clicks in six months</dt><dd>760+</dd></div>
+            <div><dt>Impressions in six months</dt><dd>112K</dd></div>
+          </dl>
+        </article>
+      </li>
+
+      <li class="case" id="case-brotzeit" data-case="brotzeit">
+        <button class="case-row" type="button" aria-haspopup="dialog">
+          <span class="case-idx mono">07</span>
+          <span class="case-name">Brotzeit <span class="amp">&amp;</span> Palmoilanalytics</span>
+          <span class="case-sector">F&amp;B · B2B agri-data</span>
+          <span class="case-metric">10K keywords ranked</span>
+          <span class="case-go" aria-hidden="true"><svg class="i"><use href="#i-out"/></svg></span>
+        </button>
+        <article class="case-body">
+          <p class="case-tags mono">F&amp;B · B2B agri-data · Agency engagement</p>
+          <h3 class="case-title">Brotzeit &amp; Palmoilanalytics</h3>
+          <blockquote class="case-quote"><p>Two clients, two very different audiences. The discipline is in adapting the same SEO craft to the SERP at hand.</p></blockquote>
+          <div class="case-visual" data-visual="brotzeit"></div>
+          <div class="case-cols">
+            <section><h4>Brotzeit · German cuisine, Singapore</h4><p>A German-cuisine chain with a strong local presence in Singapore. The work focused on ranking high-value campaign keywords across food, beer and seasonal Oktoberfest queries, combining on-page optimization with disciplined off-page link acquisition.</p><ul><li>Campaign keyword strategy in three-month cycles.</li><li>Guest posting and PBN link building at scale.</li><li>Continuous SERP competitor research.</li></ul></section>
+            <section><h4>Palmoilanalytics · Agri-commodity data, global</h4><p>A B2B data platform for palm oil traders, analysts and commodity buyers. The audience is small but high-intent, so the work emphasised news velocity, technical keyword groups (MPOB, RBD, stearin) and consistent indexing of pricing pages.</p><ul><li>Ranked across MPOB, palm oil price and varietal groups.</li><li>Two optimized news articles published every week.</li><li>Forum-based social backlinking.</li></ul></section>
+          </div>
+          <dl class="outcomes">
+            <div><dt>Brotzeit keywords ranked</dt><dd>10K</dd></div>
+            <div><dt>Brotzeit backlinks a month</dt><dd>50</dd></div>
+            <div><dt>Palmoilanalytics monthly traffic</dt><dd>10K+</dd></div>
+            <div><dt>Palmoilanalytics new users</dt><dd>95%</dd></div>
+          </dl>
+        </article>
+      </li>
+
+      <li class="case" id="case-simakara" data-case="simakara">
+        <button class="case-row" type="button" aria-haspopup="dialog">
+          <span class="case-idx mono">08</span>
+          <span class="case-name">SIMAKARA</span>
+          <span class="case-sector">EdTech · Enrollment funnel</span>
+          <span class="case-metric">3.6% CTR on registration queries</span>
+          <span class="case-go" aria-hidden="true"><svg class="i"><use href="#i-out"/></svg></span>
+        </button>
+        <article class="case-body">
+          <p class="case-tags mono">Education technology · Indonesia</p>
+          <h3 class="case-title">SIMAKARA</h3>
+          <blockquote class="case-quote"><p>When the search query is also the enrollment funnel, every #1 ranking on a registration term is a measurable step closer to a student.</p></blockquote>
+          <div class="case-visual" data-visual="simakara"></div>
+          <div class="case-cols">
+            <section><h4>The challenge</h4><p>SIMAKARA prepares Indonesian students for the SIMAK UI university entrance exam, a category where SEO feeds the enrollment funnel directly. The work blended search with broader digital marketing: leads had to be ranked, captured and converted, not just clicked.</p></section>
+            <section><h4>The approach</h4><ul><li>High-intent registration queries identified and ranked, for example "contoh formulir pendaftaran bimbel".</li><li>Landing pages optimized for informational and enrollment intent.</li><li>Reporting that connected SEO traffic to enrollment outcomes.</li><li>Long-tail targeting around exam prep and program selection.</li></ul></section>
+          </div>
+          <dl class="outcomes">
+            <div><dt>Clicks across the campaign</dt><dd>6.2K</dd></div>
+            <div><dt>Total impressions</dt><dd>171K</dd></div>
+            <div><dt>Click-through rate</dt><dd>3.6%</dd></div>
+          </dl>
+        </article>
+      </li>
+    </ol>
+    <p class="work-note mono" data-reveal>Full write-ups with more detail in the <a class="link" href="assets/docs/Muhammad-Zhafran-Tsany-Portfolio-2026.pdf" download>18-page portfolio PDF</a>.</p>
+  </div>
+
+  <!-- Floating hover preview (desktop) -->
+  <div class="pv" id="pv" aria-hidden="true">
+    <div class="pv-window"><div class="pv-reel" id="pvReel"></div></div>
+    <span class="pv-cta mono">Open case <svg class="i"><use href="#i-out"/></svg></span>
+  </div>
+</section>
+
+<!-- ============================ ENGINE ============================ -->
+<section class="sec engine" id="engine" aria-labelledby="engineTitle">
+  <div class="engine-track" id="engineTrack">
+    <div class="engine-stage">
+      <div class="wrap engine-in">
+        <div class="engine-head">
+          <p class="sec-label" data-reveal><span>(04)</span>The engine</p>
+          <h2 class="sec-title" id="engineTitle" data-split>Keyword in. <em>Ranking page</em> out.</h2>
+          <p class="sec-lead" data-reveal>The programmatic content engine behind Gotrade and Tembuni: six stages, one automated quality gate and no human in the loop. The diagram runs a live simulation.</p>
         </div>
-        <div class="skill-group">
-          <h3>Build</h3>
-          <ul><li>n8n</li><li>Next.js</li><li>React</li><li>TypeScript</li><li>Supabase</li><li>HTML/CSS</li><li>AWS</li></ul>
-        </div>
-        <div class="skill-group">
-          <h3>Growth</h3>
-          <ul><li>Google Ads</li><li>Meta Ads</li><li>GA4 &amp; GTM</li><li>Conversion optimization</li><li>KOL outreach</li><li>Data analysis</li></ul>
+
+        <div class="engine-body">
+          <ol class="steps" id="steps">
+            <li class="step is-active"><button type="button" data-step="0"><span class="step-n mono">01</span><span class="step-t">Keyword &amp; template map</span></button><div class="step-d"><p>Instrument, market and strategy clusters mapped to page templates. Thousands of target queries resolved into a finite set of layouts.</p></div></li>
+            <li class="step"><button type="button" data-step="1"><span class="step-n mono">02</span><span class="step-t">Programmatic drafting</span></button><div class="step-d"><p>Structured briefs generate a draft per keyword, with data, definitions and disclosures pulled from a controlled source layer.</p></div></li>
+            <li class="step"><button type="button" data-step="2"><span class="step-n mono">03</span><span class="step-t">Automated quality gate</span></button><div class="step-d"><p>Every draft is scored against a ZeroGPT originality benchmark and an Ahrefs-driven <span class="nw">E-E-A-T</span> checker. Anything under threshold goes back for a rewrite.</p></div></li>
+            <li class="step"><button type="button" data-step="3"><span class="step-n mono">04</span><span class="step-t">Widget generation</span></button><div class="step-d"><p>Instrument cards, price tables and comparison blocks are built and injected into each page automatically.</p></div></li>
+            <li class="step"><button type="button" data-step="4"><span class="step-n mono">05</span><span class="step-t">Internal link graph</span></button><div class="step-d"><p>Contextual links are mapped across the cluster at write time, so every new page strengthens the ones already published.</p></div></li>
+            <li class="step"><button type="button" data-step="5"><span class="step-n mono">06</span><span class="step-t">CMS publish &amp; ops</span></button><div class="step-d"><p>Publishing queue, status tracking and refresh cycles run as a managed pipeline instead of a manual editorial calendar.</p></div></li>
+          </ol>
+
+          <div class="engine-viz">
+            <div class="engine-svg-wrap"><svg class="engine-svg" id="engineSvg" aria-hidden="true"></svg></div>
+            <dl class="engine-stats">
+              <div><dt>Queued</dt><dd data-es="q">0</dd></div>
+              <div><dt>Drafted</dt><dd data-es="d">0</dd></div>
+              <div><dt>Rewritten</dt><dd data-es="r">0</dd></div>
+              <div><dt>Published</dt><dd data-es="p">0</dd></div>
+            </dl>
+            <p class="engine-note mono"><i class="pulse"></i>Simulation · gate threshold 0.80 · illustrative throughput</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ EXPERIENCE ============ -->
-<section class="section" id="experience">
+<!-- ============================ SHIPPED ============================ -->
+<section class="sec shipped" id="shipped" aria-labelledby="shippedTitle">
   <div class="wrap">
-    <p class="kicker reveal"><span>02</span> Experience</p>
-    <h2 class="reveal">A timeline of <span class="grad">growth and ownership.</span></h2>
-    <div class="timeline" id="timeline">
+    <div class="sec-head">
+      <p class="sec-label" data-reveal><span>(05)</span>Shipped</p>
+      <h2 class="sec-title" id="shippedTitle" data-split>Things I actually <em>shipped.</em></h2>
+      <p class="sec-lead" data-reveal>Four public repositories: an automation pipeline, two operational dashboards and a marketplace. Every one of them started as somebody's spreadsheet.</p>
+    </div>
 
-      <article class="tl-item reveal is-open">
-        <button class="tl-head" aria-expanded="true">
-          <span class="tl-dot"></span>
-          <span class="tl-when">Oct 2025 — Mar 2026</span>
-          <span class="tl-what"><strong>SEO Head</strong><em>Adna Group</em></span>
-          <span class="tl-tag">5 business units</span>
-          <svg viewBox="0 0 24 24" class="tl-chev"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
-        <div class="tl-body"><div class="tl-inner">
-          <ul>
-            <li>Owned end-to-end SEO strategy across five business units — AI, agriculture, e-commerce and education — building organic growth systems from 0&nbsp;→&nbsp;1.</li>
-            <li>Built programmatic content engines for Gotrade and Tembuni: automated drafting, originality and E-E-A-T gating, widget generation, internal linking and hands-off publishing to the CMS.</li>
-            <li>Led keyword research, content optimization and local SEO across industries, lifting search visibility and early traffic acquisition.</li>
-            <li>Established scalable SEO frameworks to support long-term growth and cross-industry expansion.</li>
-          </ul>
-        </div></div>
+    <div class="stack" id="stack">
+      <article class="card">
+        <div class="card-in">
+          <div class="card-copy">
+            <header class="card-top mono"><span>01 / 04</span><span class="lang"><i style="--c:#f1e05a"></i>JavaScript</span></header>
+            <h3 class="card-title">financial-reporting-pipeline</h3>
+            <p class="card-sub">Qudamah · n8n · 61 nodes · ~4k lines of JS</p>
+            <p class="card-desc">One n8n workflow that pulls invoices, inventory and the chart of accounts out of Accurate Online, merges them with the team's Google Sheets, computes operational and financial metrics, renders self-contained HTML dashboards and delivers everything to Telegram at 07:00. Then it answers follow-up questions as a conversational analyst.</p>
+            <ul class="card-points">
+              <li>P&amp;L summed from leaf GL accounts after the parent balance silently hid IDR 256M of owner draw</li>
+              <li>Per-sheet column fingerprinting, so a September row is never read through a July column map</li>
+              <li>Script-free HTML dashboards, because Telegram's document viewer runs no JavaScript</li>
+            </ul>
+            <footer class="card-foot">
+              <ul class="tags"><li>n8n</li><li>OpenAI</li><li>Telegram API</li><li>Google Sheets</li></ul>
+              <a class="card-link" href="https://github.com/zhafrantsanyy/financial-reporting-pipeline" target="_blank" rel="noopener">Repository <svg class="i"><use href="#i-out"/></svg></a>
+            </footer>
+          </div>
+          <div class="card-art" data-art="pipeline" aria-hidden="true"></div>
+        </div>
       </article>
 
-      <article class="tl-item reveal">
-        <button class="tl-head" aria-expanded="false">
-          <span class="tl-dot"></span>
-          <span class="tl-when">Jul 2024 — Oct 2025</span>
-          <span class="tl-what"><strong>SEO Specialist</strong><em>Traveloka</em></span>
-          <span class="tl-tag">4 markets</span>
-          <svg viewBox="0 0 24 24" class="tl-chev"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
-        <div class="tl-body"><div class="tl-inner">
-          <ul>
+      <article class="card">
+        <div class="card-in">
+          <div class="card-copy">
+            <header class="card-top mono"><span>02 / 04</span><span class="lang"><i style="--c:#3178c6"></i>TypeScript</span></header>
+            <h3 class="card-title">TJS-Lumber</h3>
+            <p class="card-sub">TJS Logtrade · internal dashboard for a timber broker</p>
+            <p class="card-desc">Next.js 15 App Router on Supabase: live stock, supplier reliability scoring, price history and a per-pallet quality-control sheet. Reads go through Server Components, writes through Server Actions, and every route sits behind two independent auth checks.</p>
+            <ul class="card-points">
+              <li>QC maths verified against a real grading document: 20 pallets, 2,345 OK pieces, 2.29% defect</li>
+              <li>Paste-a-batch parser that accepts whatever separator the buyer's document used</li>
+              <li>Print stylesheet that turns the QC screen into a clean sheet ready to send</li>
+            </ul>
+            <footer class="card-foot">
+              <ul class="tags"><li>Next.js 15</li><li>TypeScript</li><li>Supabase</li><li>Tailwind</li></ul>
+              <a class="card-link" href="https://github.com/zhafrantsanyy/TJS-Lumber" target="_blank" rel="noopener">Repository <svg class="i"><use href="#i-out"/></svg></a>
+            </footer>
+          </div>
+          <div class="card-art" data-art="lumber" aria-hidden="true"></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-in">
+          <div class="card-copy">
+            <header class="card-top mono"><span>03 / 04</span><span class="lang"><i style="--c:#f1e05a"></i>JavaScript</span></header>
+            <h3 class="card-title">kalamekardemo</h3>
+            <p class="card-sub">Kalamekar · marketplace for Indonesian local florists</p>
+            <p class="card-desc">Buyers browse ready-made arrangements or build their own bouquet on a drag-and-drop canvas with live pricing, then check out into Supabase. Phase 1 runs as a concierge model: the order is validated on the site and handed to a partner florist over WhatsApp.</p>
+            <ul class="card-points">
+              <li>Bouquet builder canvas that prices flowers, filler, size and wrapping in real time</li>
+              <li>Row Level Security, so a visitor can create an order but never read anyone else's</li>
+              <li>Centralised design tokens, with no hex codes hardcoded in components</li>
+            </ul>
+            <footer class="card-foot">
+              <ul class="tags"><li>React 18</li><li>Vite</li><li>Supabase</li><li>RLS</li></ul>
+              <a class="card-link" href="https://github.com/zhafrantsanyy/kalamekardemo" target="_blank" rel="noopener">Repository <svg class="i"><use href="#i-out"/></svg></a>
+            </footer>
+          </div>
+          <div class="card-art" data-art="bouquet" aria-hidden="true"></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-in">
+          <div class="card-copy">
+            <header class="card-top mono"><span>04 / 04</span><span class="lang"><i style="--c:#3178c6"></i>TypeScript</span></header>
+            <h3 class="card-title">Nusrah</h3>
+            <p class="card-sub">Nusrah · dashboard for a modest-fashion brand</p>
+            <p class="card-desc">A Next.js dashboard for Nusrah, an Indonesian modest-fashion label: the reporting surface that sits on top of the brand's sales and catalogue data.</p>
+            <ul class="card-points">
+              <li>Next.js App Router with TypeScript throughout</li>
+              <li>Built as the brand-side companion to the Qudamah reporting pipeline</li>
+            </ul>
+            <footer class="card-foot">
+              <ul class="tags"><li>Next.js</li><li>TypeScript</li></ul>
+              <a class="card-link" href="https://github.com/zhafrantsanyy/Nusrah" target="_blank" rel="noopener">Repository <svg class="i"><use href="#i-out"/></svg></a>
+            </footer>
+          </div>
+          <div class="card-art" data-art="dashboard" aria-hidden="true"></div>
+        </div>
+      </article>
+    </div>
+    <p class="more mono" data-reveal>More on <a class="link" href="https://github.com/zhafrantsanyy" target="_blank" rel="noopener">github.com/zhafrantsanyy</a></p>
+  </div>
+</section>
+
+<!-- ============================ EXPERIENCE ============================ -->
+<section class="sec xp" id="experience" aria-labelledby="xpTitle">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-label" data-reveal><span>(06)</span>Experience</p>
+      <h2 class="sec-title" id="xpTitle" data-split>A timeline of growth <em>and ownership.</em></h2>
+    </div>
+
+    <div class="xp-grid">
+      <div class="xp-rail" aria-hidden="true"><span class="xp-fill" id="xpFill"></span></div>
+      <ol class="roles" id="roles">
+        <li class="role is-open" data-reveal>
+          <button class="role-head" type="button" aria-expanded="true" aria-controls="role-1">
+            <span class="role-when mono">Oct 2025 – Mar 2026</span>
+            <span class="role-what"><strong>SEO Head</strong><span>Adna Group</span></span>
+            <span class="role-tag mono">5 business units</span>
+            <span class="role-icon" aria-hidden="true"></span>
+          </button>
+          <div class="role-body" id="role-1"><div class="role-inner"><ul>
+            <li>Owned end-to-end SEO strategy across five business units in AI, agriculture, e-commerce and education, building organic growth systems from 0 to 1.</li>
+            <li>Built programmatic content engines for Gotrade and Tembuni: automated drafting, ZeroGPT originality and <span class="nw">E-E-A-T</span> gating, widget generation, internal linking and hands-off CMS publishing.</li>
+            <li>Tembuni reached 4K clicks and 432K impressions in the first month the engine went live.</li>
+            <li>Led keyword research, content optimization and local SEO across industries, and set up frameworks for cross-industry expansion.</li>
+          </ul></div></div>
+        </li>
+        <li class="role" data-reveal>
+          <button class="role-head" type="button" aria-expanded="false" aria-controls="role-2">
+            <span class="role-when mono">Jul 2024 – Oct 2025</span>
+            <span class="role-what"><strong>SEO Specialist</strong><span>Traveloka</span></span>
+            <span class="role-tag mono">4 markets</span>
+            <span class="role-icon" aria-hidden="true"></span>
+          </button>
+          <div class="role-body" id="role-2"><div class="role-inner"><ul>
             <li>Supported multi-market SEO across Singapore, Australia, the Philippines and Vietnam, improving targeted keyword rankings in every region.</li>
-            <li>Researched 200+ keywords per month across four international markets, raising localized search relevance.</li>
-            <li>Optimized 150+ content pieces monthly, driving organic traffic and engagement gains.</li>
-            <li>Worked with editorial, product and engineering teams to align SEO with wider content strategy.</li>
-          </ul>
-        </div></div>
-      </article>
-
-      <article class="tl-item reveal">
-        <button class="tl-head" aria-expanded="false">
-          <span class="tl-dot"></span>
-          <span class="tl-when">Sep 2023 — Sep 2024</span>
-          <span class="tl-what"><strong>Digital Marketing Associate</strong><em>SIMAKARA</em></span>
-          <span class="tl-tag">EdTech</span>
-          <svg viewBox="0 0 24 24" class="tl-chev"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
-        <div class="tl-body"><div class="tl-inner">
-          <ul>
+            <li>Researched 200+ keywords a month across four international markets, raising localized search relevance and visibility.</li>
+            <li>Optimized 150+ content pieces a month, driving organic traffic and engagement gains.</li>
+            <li>Partnered with editorial, product and engineering teams on weekly content planning.</li>
+          </ul></div></div>
+        </li>
+        <li class="role" data-reveal>
+          <button class="role-head" type="button" aria-expanded="false" aria-controls="role-3">
+            <span class="role-when mono">Sep 2023 – Sep 2024</span>
+            <span class="role-what"><strong>Digital Marketing Associate</strong><span>SIMAKARA</span></span>
+            <span class="role-tag mono">EdTech</span>
+            <span class="role-icon" aria-hidden="true"></span>
+          </button>
+          <div class="role-body" id="role-3"><div class="role-inner"><ul>
             <li>Ran performance-driven campaigns that increased brand visibility and user acquisition.</li>
-            <li>Developed lead generation strategies that improved conversion and enrollment funnel performance.</li>
+            <li>Developed lead generation strategies that improved conversion rates and enrollment funnel performance.</li>
             <li>Built data-driven reporting that connected campaign spend to enrollment outcomes.</li>
-          </ul>
-        </div></div>
-      </article>
-
-      <article class="tl-item reveal">
-        <button class="tl-head" aria-expanded="false">
-          <span class="tl-dot"></span>
-          <span class="tl-when">Jan 2023 — Jan 2024</span>
-          <span class="tl-what"><strong>SEO Marketer</strong><em>DMB.SG</em></span>
-          <span class="tl-tag">Agency · 4 clients</span>
-          <svg viewBox="0 0 24 24" class="tl-chev"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
-        <div class="tl-body"><div class="tl-inner">
-          <ul>
+          </ul></div></div>
+        </li>
+        <li class="role" data-reveal>
+          <button class="role-head" type="button" aria-expanded="false" aria-controls="role-4">
+            <span class="role-when mono">Jan 2023 – Jan 2024</span>
+            <span class="role-what"><strong>SEO Marketer</strong><span>DMB.SG</span></span>
+            <span class="role-tag mono">Agency · 4 clients</span>
+            <span class="role-icon" aria-hidden="true"></span>
+          </button>
+          <div class="role-body" id="role-4"><div class="role-inner"><ul>
             <li>Improved SEO performance across four client accounts through technical audits and structured optimization.</li>
             <li>Built SEO roadmaps with clear KPIs and execution milestones.</li>
-            <li>Supported paid acquisition on Meta and Google Ads, tuning keyword targeting and ad copy for CTR.</li>
-            <li>Managed tracking infrastructure across Google Analytics, Tag Manager and Google Ads.</li>
-          </ul>
-        </div></div>
-      </article>
-
-      <article class="tl-item reveal">
-        <button class="tl-head" aria-expanded="false">
-          <span class="tl-dot"></span>
-          <span class="tl-when">Aug 2022 — Jan 2023</span>
-          <span class="tl-what"><strong>SEO Specialist Intern</strong><em>HashMicro</em></span>
-          <span class="tl-tag">B2B ERP</span>
-          <svg viewBox="0 0 24 24" class="tl-chev"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
-        <div class="tl-body"><div class="tl-inner">
-          <ul>
-            <li>Optimized 120+ articles, contributing to a 23% traffic increase every quarter and ~1M total visitors.</li>
+            <li>Supported paid acquisition on Meta and Google Ads, and managed tracking across Analytics, Tag Manager and Ads.</li>
+          </ul></div></div>
+        </li>
+        <li class="role" data-reveal>
+          <button class="role-head" type="button" aria-expanded="false" aria-controls="role-5">
+            <span class="role-when mono">Aug 2022 – Jan 2023</span>
+            <span class="role-what"><strong>SEO Specialist Intern</strong><span>HashMicro</span></span>
+            <span class="role-tag mono">B2B ERP</span>
+            <span class="role-icon" aria-hidden="true"></span>
+          </button>
+          <div class="role-body" id="role-5"><div class="role-inner"><ul>
+            <li>Optimized 120+ articles, contributing to a 23% traffic increase every quarter and around 1M total visitors.</li>
             <li>Produced 10+ qualified leads per day through SEO content and conversion optimization.</li>
-            <li>Ran daily technical audits alongside UI/UX, frontend and SEM teams.</li>
-          </ul>
-        </div></div>
-      </article>
-
-    </div>
-    <p class="tl-edu reveal">
-      <strong>Universitas Pendidikan Indonesia</strong> — B.Bus, Digital Business · GPA 3.73 / 4.00, Cum Laude · COMPFEST 2022 Finalist
-    </p>
-  </div>
-</section>
-
-<!-- ============ PROJECTS ============ -->
-<section class="section" id="projects">
-  <div class="wrap">
-    <p class="kicker reveal"><span>03</span> Projects</p>
-    <h2 class="reveal">Things I <span class="grad">actually shipped.</span></h2>
-    <p class="section-lead reveal">Four public repositories — an automation pipeline, two operational dashboards and a marketplace. Every one of them started as somebody's spreadsheet.</p>
-
-    <div class="filters reveal" role="tablist" aria-label="Filter projects">
-      <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
-      <button class="filter" data-filter="automation" role="tab" aria-selected="false">Automation</button>
-      <button class="filter" data-filter="nextjs" role="tab" aria-selected="false">Next.js</button>
-      <button class="filter" data-filter="react" role="tab" aria-selected="false">React</button>
-      <button class="filter" data-filter="supabase" role="tab" aria-selected="false">Supabase</button>
+            <li>Ran daily technical audits alongside the UI/UX, frontend and SEM teams.</li>
+          </ul></div></div>
+        </li>
+        <li class="role" data-reveal>
+          <button class="role-head" type="button" aria-expanded="false" aria-controls="role-6">
+            <span class="role-when mono">Jun 2022 – Jun 2023</span>
+            <span class="role-what"><strong>Digital Marketing Intern</strong><span>Sariraya Co., Ltd.</span></span>
+            <span class="role-tag mono">Paid social</span>
+            <span class="role-icon" aria-hidden="true"></span>
+          </button>
+          <div class="role-body" id="role-6"><div class="role-inner"><ul>
+            <li>Improved ad engagement and conversion rates by 25% through A/B testing on Facebook Ads.</li>
+            <li>Generated ¥2,000,000 in monthly sales through integrated digital channels.</li>
+          </ul></div></div>
+        </li>
+      </ol>
     </div>
 
-    <div class="projects" id="projectGrid">
-
-      <article class="pcard reveal" data-tags="automation" data-tilt>
-        <div class="pc-spot"></div>
-        <header>
-          <span class="pc-idx">01</span>
-          <span class="pc-lang"><i style="--c:#f1e05a"></i>JavaScript</span>
-        </header>
-        <h3>financial-reporting-pipeline</h3>
-        <p class="pc-sub">Qudamah · n8n · 61 nodes · ~4k lines of JS</p>
-        <p class="pc-desc">A single n8n workflow that pulls invoices, inventory and the chart of accounts out of Accurate Online, merges them with the team's Google Sheets, computes the operational and financial metrics, renders self-contained HTML dashboards and delivers everything to Telegram at 07:00 — then answers follow-up questions as a conversational analyst.</p>
-        <ul class="pc-points">
-          <li>P&amp;L summed from leaf GL accounts after the parent balance silently hid IDR 256M of owner draw</li>
-          <li>Per-sheet column fingerprinting, so a September row is never read through a July column map</li>
-          <li>Script-free HTML dashboards — Telegram's document viewer runs no JavaScript</li>
-        </ul>
-        <footer>
-          <span class="tag">n8n</span><span class="tag">OpenAI</span><span class="tag">Telegram API</span><span class="tag">Google Sheets</span>
-          <a class="pc-link" href="https://github.com/zhafrantsanyy/financial-reporting-pipeline" target="_blank" rel="noopener">
-            Repository <svg viewBox="0 0 24 24" class="i"><path d="M7 17 17 7M9 7h8v8"/></svg>
-          </a>
-        </footer>
-      </article>
-
-      <article class="pcard reveal" data-tags="nextjs supabase" data-tilt>
-        <div class="pc-spot"></div>
-        <header>
-          <span class="pc-idx">02</span>
-          <span class="pc-lang"><i style="--c:#3178c6"></i>TypeScript</span>
-        </header>
-        <h3>TJS-Lumber</h3>
-        <p class="pc-sub">TJS Logtrade · internal dashboard for a timber broker</p>
-        <p class="pc-desc">Next.js 15 App Router on Supabase: live stock, supplier reliability scoring, price history and a per-pallet quality-control sheet. Reads go through Server Components, writes through Server Actions, and every route sits behind two independent auth checks.</p>
-        <ul class="pc-points">
-          <li>QC maths verified against a real grading document — 20 pallets, 2,345 OK pieces, 2.29% defect</li>
-          <li>Paste-a-batch parser that accepts whatever separator the buyer's document used</li>
-          <li>Print stylesheet that turns the QC screen into a clean sheet ready to send</li>
-        </ul>
-        <footer>
-          <span class="tag">Next.js 15</span><span class="tag">TypeScript</span><span class="tag">Supabase</span><span class="tag">Tailwind</span>
-          <a class="pc-link" href="https://github.com/zhafrantsanyy/TJS-Lumber" target="_blank" rel="noopener">
-            Repository <svg viewBox="0 0 24 24" class="i"><path d="M7 17 17 7M9 7h8v8"/></svg>
-          </a>
-        </footer>
-      </article>
-
-      <article class="pcard reveal" data-tags="react supabase" data-tilt>
-        <div class="pc-spot"></div>
-        <header>
-          <span class="pc-idx">03</span>
-          <span class="pc-lang"><i style="--c:#f1e05a"></i>JavaScript</span>
-        </header>
-        <h3>kalamekardemo</h3>
-        <p class="pc-sub">Kalamekar · marketplace for Indonesian local florists</p>
-        <p class="pc-desc">Buyers browse ready-made arrangements or build their own bouquet on a drag-and-drop canvas with live pricing, then check out into Supabase. Phase 1 runs as a concierge model: the order is validated on the site and handed to a partner florist over WhatsApp.</p>
-        <ul class="pc-points">
-          <li>Bouquet builder canvas that prices flowers, filler, size and wrapping in real time</li>
-          <li>Row Level Security so a visitor can create an order but never read anyone else's</li>
-          <li>Centralised design tokens — no hex codes hardcoded in components</li>
-        </ul>
-        <footer>
-          <span class="tag">React 18</span><span class="tag">Vite</span><span class="tag">Supabase</span><span class="tag">RLS</span>
-          <a class="pc-link" href="https://github.com/zhafrantsanyy/kalamekardemo" target="_blank" rel="noopener">
-            Repository <svg viewBox="0 0 24 24" class="i"><path d="M7 17 17 7M9 7h8v8"/></svg>
-          </a>
-        </footer>
-      </article>
-
-      <article class="pcard reveal" data-tags="nextjs react" data-tilt>
-        <div class="pc-spot"></div>
-        <header>
-          <span class="pc-idx">04</span>
-          <span class="pc-lang"><i style="--c:#3178c6"></i>TypeScript</span>
-        </header>
-        <h3>Nusrah</h3>
-        <p class="pc-sub">Nusrah · dashboard for a modest-fashion brand</p>
-        <p class="pc-desc">A Next.js dashboard for Nusrah, an Indonesian modest fashion label — the reporting surface that sits on top of the brand's sales and catalogue data.</p>
-        <ul class="pc-points">
-          <li>Next.js App Router with TypeScript throughout</li>
-          <li>Built as the brand-side companion to the Qudamah reporting pipeline</li>
-        </ul>
-        <footer>
-          <span class="tag">Next.js</span><span class="tag">TypeScript</span>
-          <a class="pc-link" href="https://github.com/zhafrantsanyy/Nusrah" target="_blank" rel="noopener">
-            Repository <svg viewBox="0 0 24 24" class="i"><path d="M7 17 17 7M9 7h8v8"/></svg>
-          </a>
-        </footer>
-      </article>
-
-    </div>
-    <p class="projects-more reveal">More on <a href="https://github.com/zhafrantsanyy" target="_blank" rel="noopener">github.com/zhafrantsanyy</a></p>
-  </div>
-</section>
-
-<!-- ============ IMPACT ============ -->
-<section class="section section-band" id="impact">
-  <div class="wrap">
-    <p class="kicker reveal"><span>04</span> Impact</p>
-    <h2 class="reveal">Three years, <span class="grad">measured.</span></h2>
-    <div class="impact-grid">
-      <div class="istat reveal"><span class="ivalue"><span class="count" data-to="1" data-suffix="M+">0</span></span><span class="ilabel">Total visitors driven via SEO</span><span class="inote">HashMicro · 23% lift per quarter</span></div>
-      <div class="istat reveal"><span class="ivalue"><span class="count" data-to="280" data-suffix="+">0</span></span><span class="ilabel">Keywords ranked #1</span><span class="inote">Adnafarms · Superkos · SIMAKARA</span></div>
-      <div class="istat reveal"><span class="ivalue"><span class="count" data-to="432" data-suffix="K">0</span></span><span class="ilabel">Impressions in month one</span><span class="inote">Tembuni · fully automated publishing</span></div>
-      <div class="istat reveal"><span class="ivalue"><span class="count" data-to="40.7" data-decimals="1" data-suffix="K">0</span></span><span class="ilabel">Clicks over 12 months</span><span class="inote">Superkos · 1.6M impressions</span></div>
-    </div>
-    <div class="docs reveal">
-      <div class="doc">
-        <svg viewBox="0 0 24 24" class="doc-i"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
-        <div><p class="doc-t">Portfolio 2026</p><p class="doc-s">18 pages · nine case studies, PDF</p></div>
-        <a class="btn btn-ghost btn-sm" href="assets/docs/Muhammad-Zhafran-Tsany-Portfolio-2026.pdf" download>Download</a>
+    <div class="edu" data-stagger>
+      <div class="edu-card">
+        <p class="mono">Education</p>
+        <h3>Universitas Pendidikan Indonesia</h3>
+        <p>Bachelor of Business, Digital Business · graduated July 2023 · GPA 3.73 / 4.00, Cum Laude. Coursework in digital marketing, business development, cloud computing, AI and data analytics.</p>
       </div>
-      <div class="doc">
-        <svg viewBox="0 0 24 24" class="doc-i"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
-        <div><p class="doc-t">Curriculum Vitae</p><p class="doc-s">One page · experience &amp; skills, PDF</p></div>
-        <a class="btn btn-ghost btn-sm" href="assets/docs/Muhammad-Zhafran-Tsany-CV.pdf" download>Download</a>
+      <div class="edu-card">
+        <p class="mono">Recognition</p>
+        <h3>COMPFEST 2022 finalist</h3>
+        <p>An end-to-end cloud migration strategy for a startup case study, focused on infrastructure optimization, cost efficiency and platform scalability.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
-<section class="section" id="contact">
-  <div class="wrap contact-wrap">
-    <p class="kicker reveal"><span>05</span> Contact</p>
-    <h2 class="reveal">Let's talk <span class="grad">organic growth.</span></h2>
-    <p class="section-lead reveal">Open to SEO leadership, programmatic content systems and senior IC roles across Indonesia and remote-friendly teams in APAC.</p>
-    <div class="contact-grid">
-      <a class="ccard reveal magnetic" href="mailto:zhafrantsanyy@gmail.com">
-        <svg viewBox="0 0 24 24" class="i"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-        <span class="cc-l">Email</span><span class="cc-v">zhafrantsanyy@gmail.com</span>
+<!-- ============================ CAPABILITIES ============================ -->
+<section class="sec caps" id="capabilities" aria-labelledby="capsTitle">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-label" data-reveal><span>(07)</span>Capabilities</p>
+      <h2 class="sec-title" id="capsTitle" data-split>What I do, and how I <em>think about it.</em></h2>
+    </div>
+
+    <ol class="cap-list">
+      <li class="cap" data-reveal><span class="cap-n mono">01</span><h3>Search engine optimization</h3><p>Keyword research, on-page execution, technical audits and link strategy, applied across markets with different languages, intent patterns and SERP behaviour.</p></li>
+      <li class="cap" data-reveal><span class="cap-n mono">02</span><h3>Programmatic SEO &amp; automation</h3><p>Template-driven page generation at scale, with automated quality gates, widget injection, internal linking and hands-off publishing straight into the CMS.</p></li>
+      <li class="cap" data-reveal><span class="cap-n mono">03</span><h3>Performance marketing</h3><p>Google Ads and Meta Ads with structured testing, audience targeting and budget allocation, on top of tracking infrastructure across Analytics, Tag Manager and Ads.</p></li>
+      <li class="cap" data-reveal><span class="cap-n mono">04</span><h3>Content strategy &amp; localization</h3><p>Translation and proofreading across English, Bahasa Indonesia, Vietnamese, Thai and Spanish, with AI-assisted research workflows for production at scale.</p></li>
+      <li class="cap" data-reveal><span class="cap-n mono">05</span><h3>Link building &amp; KOL outreach</h3><p>Cold email outreach at scale (2,000+ targets), guest posting and PBN coordination, plus creator partnerships across Singapore and South Korea.</p></li>
+      <li class="cap" data-reveal><span class="cap-n mono">06</span><h3>Web &amp; technical foundations</h3><p>Next.js, React and Supabase for internal tools; WordPress, HTML/CSS, AWS and cloud architecture. Comfortable bridging marketing strategy and engineering execution.</p></li>
+    </ol>
+
+    <div class="adjacent">
+      <p class="sec-label" data-reveal><span>+</span>Adjacent work</p>
+      <ul class="adj-grid" data-stagger>
+        <li class="adj"><p class="adj-meta mono">EN → ID</p><h3>Rapidseedbox</h3><p>Articles and translation for a global proxy and VPN brand, researched through custom GPT workflows, with a live author profile.</p></li>
+        <li class="adj"><p class="adj-meta mono">EN → ID · TH · VI</p><h3>Jebsen &amp; Jessen</h3><p>Proofread and translated product descriptions, meta tags and landing pages in three Southeast Asian languages for a B2B industrial brand.</p></li>
+        <li class="adj"><p class="adj-meta mono">ES → ID</p><h3>Rankia.id</h3><p>Brought a Spanish-language finance brand to the Indonesian market: keyword research, article writing and full Spanish to Indonesian translation.</p></li>
+        <li class="adj"><p class="adj-meta mono">Article → landing page</p><h3>Hi-Fella / Hi-Biz</h3><p>Drove traffic from blog articles into two B2B product landing pages: a verified supplier database and a virtual expo networking platform.</p></li>
+        <li class="adj"><p class="adj-meta mono">Outreach at scale</p><h3>Kadabra Inc.</h3><p>Cold outreach to Indonesian media for paid guest posting partnerships: 2,000+ websites in six months at a reply rate of around 10%.</p></li>
+        <li class="adj"><p class="adj-meta mono">KOL partnerships</p><h3>Mozartkoogles</h3><p>Daily outreach to 50 creators across the Singaporean and South Korean markets, sourcing partners for affiliate and paid campaigns.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ IMPACT ============================ -->
+<section class="sec impact" id="impact" aria-labelledby="impactTitle">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-label" data-reveal><span>(08)</span>Impact</p>
+      <h2 class="sec-title" id="impactTitle" data-split>Three years, <em>measured.</em></h2>
+    </div>
+    <ul class="scores">
+      <li class="score" data-reveal><span class="score-v"><span class="odo" data-odo>1M+</span></span><span class="score-l">Visitors driven via SEO</span><span class="score-s mono">HashMicro · +23% a quarter</span></li>
+      <li class="score" data-reveal><span class="score-v"><span class="odo" data-odo>280+</span></span><span class="score-l">Keywords ranked #1</span><span class="score-s mono">Adnafarms · Superkos · SIMAKARA</span></li>
+      <li class="score" data-reveal><span class="score-v"><span class="odo" data-odo>432K</span></span><span class="score-l">Impressions in month one</span><span class="score-s mono">Tembuni · automated publishing</span></li>
+      <li class="score" data-reveal><span class="score-v"><span class="odo" data-odo>40.7K</span></span><span class="score-l">Clicks over 12 months</span><span class="score-s mono">Superkos · 1.6M impressions</span></li>
+      <li class="score" data-reveal><span class="score-v"><span class="odo" data-odo>2,000+</span></span><span class="score-l">Websites outreached in six months</span><span class="score-s mono">Kadabra Inc. · ~10% reply rate</span></li>
+      <li class="score" data-reveal><span class="score-v"><span class="odo" data-odo>150+</span></span><span class="score-l">Content pieces optimized a month</span><span class="score-s mono">Traveloka · 4 markets</span></li>
+      <li class="score" data-reveal><span class="score-v"><span class="odo" data-odo>6</span></span><span class="score-l">Markets served</span><span class="score-s mono">ID · SG · AU · VN · PH · US</span></li>
+      <li class="score" data-reveal><span class="score-v"><span class="odo" data-odo>7</span></span><span class="score-l">Industry verticals</span><span class="score-s mono">Travel · ERP · AgTech · EdTech · Health · Fintech · Consumer</span></li>
+    </ul>
+
+    <div class="docs" data-stagger>
+      <a class="doc" href="assets/docs/Muhammad-Zhafran-Tsany-Portfolio-2026.pdf" download>
+        <svg class="i doc-i"><use href="#i-file"/></svg>
+        <span class="doc-t">Portfolio 2026<small>18 pages · nine case studies · PDF</small></span>
+        <span class="doc-go"><svg class="i"><use href="#i-down"/></svg></span>
       </a>
-      <a class="ccard reveal magnetic" href="https://wa.me/6287720742631" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" class="i"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2 4.6 1.2V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.6l1.2 4.6-2.2 2.2Z"/></svg>
-        <span class="cc-l">WhatsApp</span><span class="cc-v">+62 877 2074 2631</span>
-      </a>
-      <a class="ccard reveal magnetic" href="https://www.linkedin.com/in/zhafran-tsany" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" class="i"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4"/></svg>
-        <span class="cc-l">LinkedIn</span><span class="cc-v">in/zhafran-tsany</span>
-      </a>
-      <a class="ccard reveal magnetic" href="https://github.com/zhafrantsanyy" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" class="i"><path d="M9 19c-4 1.4-4-2.2-6-2.8m12 5v-3.4a3 3 0 0 0-.9-2.3c2.9-.3 6-1.4 6-6.4a4.7 4.7 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.3s-1.1-.3-3.5 1.3a12 12 0 0 0-6.4 0C6.4 2.3 5.3 2.6 5.3 2.6a4.3 4.3 0 0 0-.1 3.3A4.7 4.7 0 0 0 3.9 9.1c0 5 3.1 6.1 6 6.4a3 3 0 0 0-.9 2.3V21"/></svg>
-        <span class="cc-l">GitHub</span><span class="cc-v">@zhafrantsanyy</span>
+      <a class="doc" href="assets/docs/Muhammad-Zhafran-Tsany-CV.pdf" download>
+        <svg class="i doc-i"><use href="#i-file"/></svg>
+        <span class="doc-t">Curriculum vitae<small>One page · experience and skills · PDF</small></span>
+        <span class="doc-go"><svg class="i"><use href="#i-down"/></svg></span>
       </a>
     </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="sec contact" id="contact" aria-labelledby="contactTitle">
+  <div class="wrap">
+    <p class="sec-label" data-reveal><span>(09)</span>Contact</p>
+    <h2 class="contact-title" id="contactTitle" data-split>Let’s talk <span class="face" aria-hidden="true"><picture><source srcset="assets/img/zhafran-square.webp" type="image/webp"><img src="assets/img/zhafran-square.jpg" alt="" width="512" height="512" loading="lazy" decoding="async"></picture></span> organic <em>growth.</em></h2>
+    <p class="sec-lead" data-reveal>Open to SEO leadership, programmatic content systems and senior IC roles across Indonesia and remote-friendly teams in APAC. I usually reply within a day.</p>
+
+    <div class="mail" data-reveal>
+      <a class="mail-link" href="mailto:zhafrantsanyy@gmail.com" data-magnetic="0.2"><span class="roll" data-roll>zhafrantsanyy@gmail.com</span></a>
+      <button class="btn btn-line" type="button" data-copy="zhafrantsanyy@gmail.com"><svg class="i"><use href="#i-copy"/></svg><span>Copy email</span></button>
+    </div>
+
+    <ul class="reach" data-stagger>
+      <li><a href="mailto:zhafrantsanyy@gmail.com"><svg class="i"><use href="#i-mail"/></svg><span class="reach-l mono">Email</span><span class="reach-v">zhafrantsanyy@gmail.com</span><svg class="i reach-go"><use href="#i-out"/></svg></a></li>
+      <li><a href="https://wa.me/6287720742631" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg><span class="reach-l mono">WhatsApp</span><span class="reach-v">+62 877 2074 2631</span><svg class="i reach-go"><use href="#i-out"/></svg></a></li>
+      <li><a href="https://www.linkedin.com/in/zhafran-tsany" target="_blank" rel="noopener"><svg class="i"><use href="#i-in"/></svg><span class="reach-l mono">LinkedIn</span><span class="reach-v">in/zhafran-tsany</span><svg class="i reach-go"><use href="#i-out"/></svg></a></li>
+      <li><a href="https://github.com/zhafrantsanyy" target="_blank" rel="noopener"><svg class="i"><use href="#i-gh"/></svg><span class="reach-l mono">GitHub</span><span class="reach-v">@zhafrantsanyy</span><svg class="i reach-go"><use href="#i-out"/></svg></a></li>
+    </ul>
   </div>
 </section>
 </main>
 
-<footer class="foot">
-  <div class="wrap foot-inner">
-    <p>© <span id="year">2026</span> Muhammad Zhafran Tsany</p>
-    <p class="foot-note">Built with plain HTML, CSS and JavaScript. Hosted on GitHub Pages.</p>
+<!-- ============================ FOOTER ============================ -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-top mono">
+      <span>Bekasi, ID · <time data-clock>07:00</time> WIB</span>
+      <button class="ftr-search" type="button" data-palette>Press <kbd class="kbd" data-kbd>Ctrl K</kbd> to search</button>
+      <a class="ftr-up" href="#top">Back to top <svg class="i"><use href="#i-up"/></svg></a>
+    </div>
+    <p class="ftr-word" aria-hidden="true" data-footer-word>Zhafran Tsany</p>
+    <div class="ftr-bottom mono">
+      <span>© <span data-year>2026</span> Muhammad Zhafran Tsany</span>
+      <span>Hand-built in HTML, CSS and JavaScript. No framework. Hosted on GitHub Pages.</span>
+    </div>
   </div>
 </footer>
 
-<button class="to-top" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></svg></button>
+<!-- ============================ OVERLAYS ============================ -->
+<dialog class="case-dialog" id="caseDialog" aria-labelledby="cdTitle">
+  <div class="cd-panel" data-lenis-prevent>
+    <div class="cd-bar">
+      <span class="cd-count mono"><span id="cdIdx">01</span> / 08</span>
+      <div class="cd-nav">
+        <button class="tool" type="button" id="cdPrev" aria-label="Previous case study"><svg class="i"><use href="#i-left"/></svg></button>
+        <button class="tool" type="button" id="cdNext" aria-label="Next case study"><svg class="i"><use href="#i-arrow"/></svg></button>
+        <button class="tool" type="button" id="cdClose" aria-label="Close case study"><svg class="i"><use href="#i-close"/></svg></button>
+      </div>
+    </div>
+    <div class="cd-content" id="cdContent"></div>
+    <button class="cd-more" type="button" id="cdMore"><span class="mono">Next case</span><strong id="cdMoreName">Tembuni</strong><svg class="i"><use href="#i-arrow"/></svg></button>
+  </div>
+</dialog>
+
+<dialog class="palette" id="palette" aria-label="Search this site">
+  <div class="pal-box">
+    <div class="pal-field">
+      <svg class="i"><use href="#i-search"/></svg>
+      <input id="palInput" type="text" role="combobox" aria-expanded="true" aria-controls="palList" aria-autocomplete="list" aria-label="Search sections, case studies and actions" placeholder="Search case studies, sections, actions…" autocomplete="off" spellcheck="false">
+      <kbd class="kbd">esc</kbd>
+    </div>
+    <p class="pal-stats mono" id="palStats" aria-live="polite"></p>
+    <ul class="pal-list" id="palList" role="listbox" aria-label="Results" data-lenis-prevent></ul>
+    <div class="pal-foot mono"><span><kbd class="kbd">↑</kbd><kbd class="kbd">↓</kbd> move</span><span><kbd class="kbd">↵</kbd> open</span><span>Ranked by relevance, obviously.</span></div>
+  </div>
+</dialog>
+
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="assets/js/main.js" defer></script>
+<script src="assets/js/vendor/lenis.min.js" defer></script>
+<script src="assets/js/motion.js" defer></script>
+<script src="assets/js/visuals.js" defer></script>
+<script src="assets/js/app.js" defer></script>
 </body>
 </html>
