@@ -17,7 +17,7 @@ Live at **https://zhafrantsanyy.github.io**
 | 05 | Shipped | The four public repositories as stacking cards, each with generative artwork |
 | 06 | Experience | Expandable timeline with a scroll-linked progress rail |
 | 07 | Capabilities | What I do, plus translation, localization and outreach work |
-| 08 | Impact | Odometer counters and the CV / portfolio downloads |
+| 08 | Impact | Odometer counters and the CV download |
 | 09 | Contact | Email, WhatsApp, LinkedIn, GitHub, copy-to-clipboard |
 
 Also: a **command palette** (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>K</kbd> or <kbd>/</kbd>) that searches every case study, role and project and ranks the results like a SERP, a light and dark theme with a circular reveal, a pause-animations toggle, and a 404 page that doesn't rank.
@@ -58,7 +58,7 @@ Plain HTML, CSS and JavaScript. No framework and no build step: GitHub Pages ser
 │   │   └── app.js           wires the page: theme, menu, cases, palette...
 │   ├── fonts/               woff2 files + OFL.txt
 │   ├── img/                 photos, icons, og.jpg
-│   └── docs/                CV and portfolio PDFs
+│   └── docs/                CV (PDF)
 ├── .nojekyll                serve files as-is, skip Jekyll processing
 ├── robots.txt
 └── sitemap.xml
@@ -84,10 +84,10 @@ Push to `main`, then in **Settings → Pages** choose *Deploy from a branch* →
 - **Hero rank-tracker lines**: the `clusters` list in `app.js` (label, client, metric and which case it opens).
 - **Numbers that roll**: any element with `data-odo`; write the final value as its text, for example `<span data-odo>432K</span>`.
 - **Colours and spacing**: the custom properties at the top of `assets/css/style.css`.
-- **Documents**: replace the PDFs in `assets/docs/` keeping the same filenames.
+- **CV**: replace `assets/docs/Muhammad-Zhafran-Tsany-CV.pdf`, keeping the same filename so the links stay valid.
 - **Photo**: replace `assets/img/zhafran-portrait.jpg` / `.webp` (4:5) and `zhafran-square.jpg` (1:1, used in the contact heading and structured data).
 - **Social preview**: `assets/img/og.jpg` is 1200 × 630.
 
 ## License
 
-Code is MIT. Written content, photos, CV and portfolio documents are © Muhammad Zhafran Tsany. Fonts are under the SIL Open Font License 1.1 and Lenis under MIT.
+Code is MIT. Written content, photos and the CV are © Muhammad Zhafran Tsany. Fonts are under the SIL Open Font License 1.1 and Lenis under MIT.

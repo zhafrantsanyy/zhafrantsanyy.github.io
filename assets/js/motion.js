@@ -179,6 +179,15 @@
       });
     })(el);
     el.style.setProperty('--n', idx);
+    /* Words inside an accent <em> each take the next slice of one gradient,
+       so the phrase reads as a single sweep even while the words animate apart. */
+    Array.prototype.forEach.call(el.querySelectorAll('em'), function (em) {
+      var ws = em.querySelectorAll('.' + outer), n = ws.length;
+      Array.prototype.forEach.call(ws, function (w, k) {
+        w.style.setProperty('--g0', (k / n * 100).toFixed(1) + '%');
+        w.style.setProperty('--g1', ((k + 1) / n * 100).toFixed(1) + '%');
+      });
+    });
     el.__split = words;
     return words;
   };
@@ -357,14 +366,22 @@
 
   /* ---------- footer wordmark ---------- */
   ZT.footerWord = function (el) {
-    var text = el.textContent;
+    var words = el.textContent.trim().split(/\s+/), last = words.length - 1;
     el.textContent = '';
-    text.split('').forEach(function (ch) {
-      if (ch === ' ') { el.appendChild(document.createTextNode(' ')); return; }
-      var s = document.createElement('span');
-      s.className = 'fc'; s.textContent = ch;
-      s.style.setProperty('--k', (0.55 + Math.random() * 1.1).toFixed(2));
-      el.appendChild(s);
+    words.forEach(function (word, wi) {
+      if (wi) el.appendChild(document.createTextNode(' '));
+      word.split('').forEach(function (ch, ci) {
+        var s = document.createElement('span');
+        s.className = 'fc'; s.textContent = ch;
+        s.style.setProperty('--k', (0.55 + Math.random() * 1.1).toFixed(2));
+        /* the surname is the accent: serif italic with the gradient, one slice per letter */
+        if (wi === last && last > 0) {
+          s.classList.add('fc-acc');
+          s.style.setProperty('--g0', (ci / word.length * 100).toFixed(1) + '%');
+          s.style.setProperty('--g1', ((ci + 1) / word.length * 100).toFixed(1) + '%');
+        }
+        el.appendChild(s);
+      });
     });
     var cur = 0;
     ZT.onScroll(function () {

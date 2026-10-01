@@ -4,7 +4,7 @@
    - Case-study charts (SVG, built at the size of their container)
    - Shipped-project artwork (SVG)
    - The content-engine simulation (SVG)
-   Numbers shown are the ones in the portfolio PDF; anything illustrative
+   Numbers shown are the ones from the case studies; anything illustrative
    is labelled as such on the page.
    ========================================================================== */
 (function () {
@@ -192,10 +192,10 @@
     return s;
   };
 
-  /* Superkos: monthly clicks, 12-month ramp (bar heights from the PDF chart). */
-  var SUPERKOS = [222, 370, 593, 815, 1333, 2074, 2815, 3556, 4296, 5185, 6074, 6815];
+  /* Property platform: monthly clicks, 12-month ramp (bar heights from the original report chart). */
+  var MONTHLY_CLICKS = [222, 370, 593, 815, 1333, 2074, 2815, 3556, 4296, 5185, 6074, 6815];
   var MONTHS = ['Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'];
-  V.superkos = function (w, h, opts) {
+  V.property = function (w, h, opts) {
     var s = svgRoot(w, h);
     var interactive = opts && opts.interactive, base = w > 520 ? '40.7K clicks · 1.6M impressions' : '40.7K clicks';
     text(s, 0, 11, w > 300 ? 'Monthly clicks, 12-month ramp' : 'Monthly clicks', { 'data-fade': '' });
@@ -207,14 +207,14 @@
       text(s, 0, Yv(g) + 3, g ? g / 1000 + 'K' : '0');
     });
     var step = (c.w - padL) / 12, gap = Math.max(3, step * 0.24), bars = [];
-    SUPERKOS.forEach(function (v, i) {
+    MONTHLY_CLICKS.forEach(function (v, i) {
       var x = padL + i * step + gap / 2, y = Yv(v);
       bars.push(mk('rect', { x: x, y: y, width: step - gap, height: Yv(0) - y, rx: Math.min(4, (step - gap) / 4),
         'class': i === 11 ? 'bar-acc' : 'bar', 'data-grow': '', style: d(i * 0.06) }, s));
       if (w > 360 || i % 2 === 0) text(s, x + (step - gap) / 2, h - 2, MONTHS[i], { 'text-anchor': 'middle' });
     });
     if (interactive) {
-      SUPERKOS.forEach(function (v, i) {
+      MONTHLY_CLICKS.forEach(function (v, i) {
         var hit = mk('rect', { x: padL + i * step, y: c.y, width: step, height: c.h, 'class': 'bar-hit' }, s);
         hit.addEventListener('pointerenter', function () {
           bars.forEach(function (b, j) { b.setAttribute('class', j === i ? 'bar-acc' : 'bar'); });
@@ -229,8 +229,8 @@
     return s;
   };
 
-  /* Adnafarms: a 280-keyword portfolio placed by difficulty and intent. */
-  V.adnafarms = function (w, h) {
+  /* Avocado grower: a 280-keyword portfolio placed by difficulty and intent. */
+  V.agriculture = function (w, h) {
     var s = svgRoot(w, h), R = rng(280);
     var c = frame(s, w, h, 'Illustrative keyword placement', '280+ keywords');
     var zone = { x: c.x, y: c.y, w: c.w * 0.42, h: c.h * 0.5 };
@@ -252,12 +252,12 @@
     return s;
   };
 
-  /* Brotzeit and Palmoilanalytics: two clients, two audiences. */
-  V.brotzeit = function (w, h) {
+  /* Two agency clients, two audiences. */
+  V.agency = function (w, h) {
     var s = svgRoot(w, h);
     var half = w / 2, big = clamp(Math.min(half * 0.26, h * 0.24), 26, 70);
     mk('line', { x1: half, y1: 0, x2: half, y2: h, 'class': 'grid' }, s);
-    text(s, 0, 11, 'Brotzeit · Singapore', { 'data-fade': '' });
+    text(s, 0, 11, 'Restaurant chain · SG', { 'data-fade': '' });
     text(s, 0, 30 + big, '10K', { 'class': 't-strong', style: 'font-size:' + big + 'px;' + d(0.2), 'data-fade': '' });
     text(s, 0, 30 + big + 17, 'Keywords ranked', { 'data-fade': '', style: d(0.3) });
     var barsTop = 30 + big + 36, bw = (half - 24) / 50;
@@ -270,7 +270,7 @@
       text(s, 0, h - 2, '50 backlinks a month');
     }
     var cx0 = half + 20;
-    text(s, cx0, 11, 'Palmoilanalytics · global', { 'data-fade': '' });
+    text(s, cx0, 11, 'Commodity data · global', { 'data-fade': '' });
     var rr = Math.max(18, Math.min((half - 40) / 2.2, (h - 60) / 2)), cx = cx0 + rr + 8, cy = 30 + (h - 48) / 2 + 4;
     var circ = 2 * Math.PI * rr;
     mk('circle', { cx: cx, cy: cy, r: rr, 'class': 'ring', style: 'stroke-width:' + Math.max(6, rr * 0.18) }, s);
@@ -481,6 +481,7 @@
 
     function readColors() {
       col.fg = css('--fg'); col.accent = css('--accent'); col.accentFg = css('--accent-fg'); col.bg = css('--bg');
+      col.a1 = css('--a1'); col.a2 = css('--a2');
       col.light = root.getAttribute('data-theme') === 'light';
     }
     function gen() {
@@ -569,8 +570,10 @@
           }
           ctx.lineTo(M.xs[M.n - 1], M.ys[M.n - 1]);
           if (isHot) {
-            if (!col.light) { ctx.strokeStyle = rgba(col.accent, 0.16); ctx.lineWidth = 9; ctx.stroke(); }
-            ctx.strokeStyle = col.light ? col.accentFg : col.accent; ctx.lineWidth = 2.4;
+            if (!col.light) { ctx.strokeStyle = rgba(col.a1, 0.16); ctx.lineWidth = 9; ctx.stroke(); }
+            var hg = ctx.createLinearGradient(box.left, 0, box.right, 0);
+            hg.addColorStop(0, col.a1); hg.addColorStop(1, col.a2);
+            ctx.strokeStyle = hg; ctx.lineWidth = 2.4;
           } else if (M.labeled) {
             ctx.strokeStyle = rgba(col.fg, hot > -1 ? 0.16 : 0.3); ctx.lineWidth = 1.3;
           } else {
@@ -580,11 +583,11 @@
           if (M.labeled && M.n === N) {
             var ex = M.xs[N - 1], ey = M.ys[N - 1];
             ctx.beginPath(); ctx.arc(ex, ey, isHot ? 4.5 : 2.6, 0, Math.PI * 2);
-            ctx.fillStyle = isHot ? (col.light ? col.accentFg : col.accent) : rgba(col.fg, 0.45);
+            ctx.fillStyle = isHot ? col.a2 : rgba(col.fg, 0.45);
             ctx.fill();
             if (isHot) {
               ctx.beginPath(); ctx.arc(ex, ey, 10, 0, Math.PI * 2);
-              ctx.strokeStyle = rgba(col.accent, 0.5); ctx.lineWidth = 1; ctx.stroke();
+              ctx.strokeStyle = rgba(col.a2, 0.5); ctx.lineWidth = 1; ctx.stroke();
             }
           }
         }
