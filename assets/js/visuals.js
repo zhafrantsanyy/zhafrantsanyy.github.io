@@ -620,6 +620,8 @@
 
     /* ---- hover / tooltip ---- */
     function nearest(px, py) {
+      /* The canvas is sized after first paint; a pointer already over the hero can arrive sooner. */
+      if (!W || lines.length < clusters.length) return -1;
       var best = -1, bd = coarse ? 44 : 26, t = (px - box.left) / (box.right - box.left);
       if (t < 0 || t > 1.02) return -1;
       var tau = ZT.reduced() ? 0 : (performance.now() - t0) / 1000;
