@@ -57,7 +57,7 @@
   }
   function applyTheme(t) {
     root.setAttribute('data-theme', t);
-    if (metaTheme) metaTheme.setAttribute('content', t === 'light' ? '#F1F0E9' : '#0B0C0A');
+    if (metaTheme) metaTheme.setAttribute('content', t === 'light' ? '#F2F4F8' : '#0A0C12');
     themeLabels();
     ZT.emit('theme', t);
   }
@@ -339,7 +339,7 @@
   safe('preview', function () {
     var pv = $('#pv'), reel = $('#pvReel'), list = $('#cases');
     if (!pv || !list || !ZT.finePointer) return;
-    var PRIMARY = { gotrade: 1, tembuni: 1, traveloka: 1, hashmicro: 0, superkos: 0, adnafarms: 0, brotzeit: 0, simakara: 2 };
+    var PRIMARY = { gotrade: 1, tembuni: 1, traveloka: 1, hashmicro: 0, property: 0, agriculture: 0, agency: 0, simakara: 2 };
     var slides = CASES.map(function (c) {
       var sl = document.createElement('div');
       sl.className = 'pv-slide';
@@ -420,11 +420,11 @@
       canvas: $('#rankCanvas'), hero: $('.hero'), tip: $('#rankTip'),
       clusters: [
         { id: 'simakara', k: 'Registration queries', client: 'SIMAKARA', m: '6.2K clicks · 3.6% CTR' },
-        { id: 'adnafarms', k: 'Varietal avocado long-tail', client: 'Adnafarms', m: '280+ keywords managed' },
+        { id: 'agriculture', k: 'Varietal avocado long-tail', client: 'Avocado grower', m: '280+ keywords managed' },
         { id: 'tembuni', k: 'Pregnancy & labour questions', client: 'Tembuni', m: '432K impressions, month one' },
-        { id: 'superkos', k: 'Room layouts & rental templates', client: 'Superkos', m: '40.7K clicks in 12 months' },
-        { id: 'brotzeit', k: 'MPOB & palm oil prices', client: 'Palmoilanalytics', m: '10K+ monthly traffic' },
-        { id: 'brotzeit', k: 'Oktoberfest & German food', client: 'Brotzeit', m: '10K keywords ranked' },
+        { id: 'property', k: 'Room layouts & rental templates', client: 'Property platform', m: '40.7K clicks in 12 months' },
+        { id: 'agency', k: 'Commodity price queries', client: 'Commodity-data platform', m: '10K+ monthly traffic' },
+        { id: 'agency', k: 'Seasonal F&B campaigns', client: 'Restaurant chain', m: '10K keywords ranked' },
         { id: 'gotrade', k: 'Instrument & market pages', client: 'Gotrade', m: 'Every article quality-gated' },
         { id: 'traveloka', k: 'Destination guides', client: 'Traveloka', m: 'SG · AU · VN · PH' },
         { id: 'hashmicro', k: 'ERP software guides', client: 'HashMicro', m: '~1M visitors, +23% a quarter' }
@@ -585,7 +585,7 @@
         ['shipped', 'Shipped', 'Four public repositories', 'projects github repositories code n8n next.js supabase'],
         ['experience', 'Experience', 'Roles from 2022 to 2026', 'timeline jobs career history', true],
         ['capabilities', 'Capabilities', 'What I do, plus adjacent work', 'services skills translation localization outreach kol'],
-        ['impact', 'Impact', 'The numbers, plus CV and portfolio downloads', 'results metrics numbers'],
+        ['impact', 'Impact', 'The numbers, plus the CV download', 'results metrics numbers'],
         ['contact', 'Contact', 'Email, WhatsApp, LinkedIn, GitHub', 'hire email reach message', true]
       ].forEach(function (s) {
         add({ kind: 'Section', title: s[1], sub: s[2], kw: s[3], suggest: !!s[4], run: function () { var t = document.getElementById(s[0]); if (t) ZT.scrollTo(t); } });
@@ -609,7 +609,6 @@
       });
       add({ kind: 'Action', title: 'Copy email address', sub: 'zhafrantsanyy@gmail.com', kw: 'mail contact copy clipboard', suggest: true, run: copyEmail });
       add({ kind: 'Action', title: 'Download CV', sub: 'One-page PDF', kw: 'resume curriculum vitae pdf download', suggest: true, run: function () { download('assets/docs/Muhammad-Zhafran-Tsany-CV.pdf'); } });
-      add({ kind: 'Action', title: 'Download the portfolio PDF', sub: '18 pages, nine case studies', kw: 'pdf download deck case studies', run: function () { download('assets/docs/Muhammad-Zhafran-Tsany-Portfolio-2026.pdf'); } });
       add({ kind: 'Action', title: function () { return root.getAttribute('data-theme') === 'light' ? 'Switch to dark theme' : 'Switch to light theme'; }, sub: 'Colour theme', kw: 'theme dark light mode colour color appearance', suggest: true, run: function () { toggleTheme(); } });
       add({ kind: 'Action', title: function () { return ZT.reduced() ? 'Play animations' : 'Pause animations'; }, sub: 'Motion preference', kw: 'motion reduce animation accessibility stop pause play', run: function () { setMotion(ZT.reduced()); } });
       add({ kind: 'Link', title: 'Send an email', sub: 'zhafrantsanyy@gmail.com', kw: 'mail contact hire', run: function () { location.href = 'mailto:zhafrantsanyy@gmail.com'; } });
