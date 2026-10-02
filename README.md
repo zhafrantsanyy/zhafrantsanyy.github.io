@@ -29,7 +29,7 @@ Plain HTML, CSS and JavaScript. No framework and no build step: GitHub Pages ser
 - **Motion**: a small in-house toolkit (`assets/js/motion.js`) with one `requestAnimationFrame` ticker, word-split reveals, scroll-lit text, odometers, a velocity-reactive marquee, parallax, stacking cards and a scroll-linked footer wordmark
 - **Smooth scrolling**: [Lenis](https://github.com/darkroomengineering/lenis) 1.3 (MIT), vendored in `assets/js/vendor/`. Desktop with a mouse only; touch devices and reduced motion keep native scrolling
 - **Visuals**: canvas for the hero rank tracker, generated SVG for the case-study charts, project artwork and the engine simulation (`assets/js/visuals.js`)
-- **Type**: Bricolage Grotesque (display), Instrument Serif italic (accents), Inter (text) and Geist Mono (labels), all self-hosted woff2 under the SIL Open Font License (see `assets/fonts/OFL.txt`)
+- **Type**: set for readability. Plus Jakarta Sans (by the Indonesian foundry Tokotype) for headings and the italic accent words, Inter for running text and every label, in sentence case at 13px or larger. Both have large x-heights; headings use moderate tracking plus a little extra word spacing, since Plus Jakarta Sans has a narrow space. Self-hosted woff2 under the SIL Open Font License (see `assets/fonts/OFL.txt`), about 105 KB in total
 - **Theme**: colours are CSS custom properties at the top of `style.css`, with a dark and a light set. The choice follows the system setting until a visitor picks one
 
 ## Accessibility and performance

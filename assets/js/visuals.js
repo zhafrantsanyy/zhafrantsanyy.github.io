@@ -531,7 +531,7 @@
       if (!W) return;
       ctx.clearRect(0, 0, W, H);
       /* rank grid */
-      ctx.font = '500 10px "Geist Mono", ui-monospace, monospace';
+      ctx.font = '600 11.5px Inter, system-ui, sans-serif';
       ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
       [1, 3, 10, 30].forEach(function (r) {
         var y = Math.round(Y(r)) + 0.5;
@@ -773,7 +773,7 @@
         var led = mk('circle', { cx: n[0] + L.nw / 2 - 14, cy: n[1] - 10, r: 3.5, 'class': 'e-led' }, g);
         nodes.push({ g: g, led: led, x: n[0], y: n[1], blink: 0 });
       });
-      scoreEl = text(svg, L.score[0], L.score[1], 'gate · waiting', { 'class': 'e-score', 'text-anchor': L.score[2] });
+      scoreEl = text(svg, L.score[0], L.score[1], 'Gate · waiting', { 'class': 'e-score', 'text-anchor': L.score[2] });
 
       var o = L.out, og = mk('g', { 'class': 'e-out' }, svg);
       mk('rect', { x: o[0], y: o[1], width: o[2], height: o[3], rx: 14, 'class': 'e-box' }, og);
@@ -808,7 +808,7 @@
       if (n === 2) {
         var fail = Math.random() < (p.tries ? 0.1 : 0.27);
         var score = fail ? 0.62 + Math.random() * 0.17 : 0.8 + Math.random() * 0.17;
-        if (scoreEl) { scoreEl.textContent = 'score ' + score.toFixed(2) + (fail ? ' · rewrite' : ' · pass'); scoreEl.setAttribute('class', 'e-score ' + (fail ? 'is-fail' : 'is-pass')); }
+        if (scoreEl) { scoreEl.textContent = 'Score ' + score.toFixed(2) + (fail ? ' · rewrite' : ' · pass'); scoreEl.setAttribute('class', 'e-score ' + (fail ? 'is-fail' : 'is-pass')); }
         if (fail) {
           p.tries++; stats.r++;
           nodes[2].led.setAttribute('class', 'e-led is-fail');
