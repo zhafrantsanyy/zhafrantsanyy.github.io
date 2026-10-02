@@ -339,7 +339,7 @@
   safe('preview', function () {
     var pv = $('#pv'), reel = $('#pvReel'), list = $('#cases');
     if (!pv || !list || !ZT.finePointer) return;
-    var PRIMARY = { gotrade: 1, tembuni: 1, traveloka: 1, hashmicro: 0, property: 0, agriculture: 0, agency: 0, simakara: 2 };
+    var PRIMARY = { trading: 1, tembuni: 1, traveloka: 1, hashmicro: 0, property: 0, agriculture: 0, agency: 0, simakara: 2 };
     var slides = CASES.map(function (c) {
       var sl = document.createElement('div');
       sl.className = 'pv-slide';
@@ -425,7 +425,7 @@
         { id: 'property', k: 'Room layouts & rental templates', client: 'Property platform', m: '40.7K clicks in 12 months' },
         { id: 'agency', k: 'Commodity price queries', client: 'Commodity-data platform', m: '10K+ monthly traffic' },
         { id: 'agency', k: 'Seasonal F&B campaigns', client: 'Restaurant chain', m: '10K keywords ranked' },
-        { id: 'gotrade', k: 'Instrument & market pages', client: 'Gotrade', m: 'Every article quality-gated' },
+        { id: 'trading', k: 'Instrument & market pages', client: 'Trading platform', m: 'Every article quality-gated' },
         { id: 'traveloka', k: 'Destination guides', client: 'Traveloka', m: 'SG · AU · VN · PH' },
         { id: 'hashmicro', k: 'ERP software guides', client: 'HashMicro', m: '~1M visitors, +23% a quarter' }
       ],
@@ -591,7 +591,7 @@
         add({ kind: 'Section', title: s[1], sub: s[2], kw: s[3], suggest: !!s[4], run: function () { var t = document.getElementById(s[0]); if (t) ZT.scrollTo(t); } });
       });
       CASES.forEach(function (c) {
-        add({ kind: 'Case', title: c.name, sub: c.sector + ' · ' + c.metric, kw: c.body.textContent, suggest: c.id === 'tembuni' || c.id === 'gotrade',
+        add({ kind: 'Case', title: c.name, sub: c.sector + ' · ' + c.metric, kw: c.body.textContent, suggest: c.id === 'tembuni' || c.id === 'trading',
           run: function () { openCase(c.id); } });
       });
       $$('.card').forEach(function (card) {

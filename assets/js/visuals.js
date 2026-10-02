@@ -64,8 +64,8 @@
      Case visuals
      ====================================================================== */
 
-  /* Gotrade: distribution of draft scores against the quality gate. */
-  V.gotrade = function (w, h) {
+  /* Trading platform: distribution of draft scores against the quality gate. */
+  V.trading = function (w, h) {
     var s = svgRoot(w, h), R = rng(11);
     var c = frame(s, w, h, 'Illustrative draft scores', 'Gate at 0.80');
     var bins = w < 420 ? 16 : 24, lo = 0.52, hi = 1.0, bw = (hi - lo) / bins, vals = [];
