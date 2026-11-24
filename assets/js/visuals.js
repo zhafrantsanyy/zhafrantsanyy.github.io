@@ -286,6 +286,54 @@
     return s;
   };
 
+  /* Multi-agent platform: seven role agents reach every tool through one policy gateway. */
+  V.agents = function (w, h) {
+    var s = svgRoot(w, h), compact = w < 520;
+    var c = frame(s, w, h, compact ? 'One gateway, every call' : 'Every tool call goes through one gateway', 'Audited', 4);
+    var A = ['Chief of staff', 'Engineering', 'Academic & ops', 'Data', 'Finance', 'Growth', 'Compliance'];
+    var T = ['GitHub', 'n8n · Vercel', 'Reporting views', 'Coolify', 'Workspace'];
+    var L = [['L0', 'read'], ['L1', 'propose'], ['L2', 'approve'], ['L3', 'act'], ['L4', 'never']];
+    var rowA = c.h / A.length, nh = Math.min(26, rowA * 0.74), fs = clamp(nh * 0.44, 8.5, 11.5);
+    var nwA = compact ? Math.min(96, w * 0.3) : Math.min(150, w * 0.24);
+    var nwT = compact ? Math.min(90, w * 0.27) : Math.min(140, w * 0.21);
+    var gw = compact ? Math.min(104, w * 0.3) : Math.min(196, w * 0.27);
+    var xA = nwA / 2, xT = w - nwT / 2, xG = (nwA + (w - nwT)) / 2;
+    var rowL = Math.min(30, (c.h - 34) / L.length), gh = rowL * L.length + 34, gy = c.y + (c.h - gh) / 2;
+    var rowT = c.h / T.length, hub = gy + 30 + rowL * 2.5;
+    function node(g, x, y, nw, label) {
+      mk('rect', { x: x - nw / 2, y: y - nh / 2, width: nw, height: nh, rx: Math.min(9, nh / 2.6), 'class': 'node' }, g);
+      mk('circle', { cx: x - nw / 2 + 10, cy: y, r: 2.8, 'class': 'dot' }, g);
+      text(g, x - nw / 2 + 18, y + fs * 0.36, label, { 'class': 't-strong', style: 'font-size:' + fs + 'px;font-family:var(--f-sans);font-weight:600' });
+    }
+    function curve(x1, y1, x2, y2) {
+      var k = Math.max(14, (x2 - x1) * 0.55);
+      return 'M' + x1 + ' ' + y1 + ' C' + (x1 + k) + ' ' + y1 + ' ' + (x2 - k) + ' ' + y2 + ' ' + x2 + ' ' + y2;
+    }
+    A.forEach(function (a, i) {
+      mk('path', { d: curve(nwA, c.y + rowA * (i + 0.5), xG - gw / 2, hub), 'class': 'edge', 'data-fade': '', style: d(0.3 + i * 0.05) }, s);
+    });
+    T.forEach(function (t, i) {
+      mk('path', { d: curve(xG + gw / 2, hub, w - nwT, c.y + rowT * (i + 0.5)), 'class': 'edge', 'data-fade': '', style: d(0.6 + i * 0.05) }, s);
+    });
+    A.forEach(function (a, i) {
+      node(mk('g', { 'data-pop': '', style: d(0.05 + i * 0.06) }, s), xA, c.y + rowA * (i + 0.5), nwA, a);
+    });
+    var gg = mk('g', { 'data-pop': '', style: d(0.45) }, s);
+    mk('rect', { x: xG - gw / 2, y: gy, width: gw, height: gh, rx: 12, 'class': 'pill' }, gg);
+    text(gg, xG - gw / 2 + 12, gy + 21, compact ? 'Gateway' : 'MCP gateway', { 'class': 't-strong', style: 'font-size:' + (fs + 1) + 'px;font-family:var(--f-sans)' });
+    L.forEach(function (l, i) {
+      var y = gy + 30 + rowL * i, ap = i === 2, nv = i === 4;
+      mk('rect', { x: xG - gw / 2 + 8, y: y, width: gw - 16, height: rowL - 5, rx: 6, 'class': ap ? 'node-acc' : 'node' }, gg);
+      text(gg, xG - gw / 2 + 16, y + (rowL - 5) / 2 + fs * 0.36, l[0] + (compact ? '' : '  ' + l[1]),
+        { 'class': nv ? 't-warn' : 't-strong', style: 'font-size:' + fs + 'px;font-family:var(--f-sans);font-weight:600;' + (ap ? 'fill:var(--accent-ink)' : '') });
+    });
+    T.forEach(function (t, i) {
+      node(mk('g', { 'data-pop': '', style: d(0.75 + i * 0.06) }, s), xT, c.y + rowT * (i + 0.5), nwT, t);
+    });
+    if (!compact && h - (gy + gh) > 22) text(s, xG, h - 2, 'L2 waits for a person · every call logged', { 'text-anchor': 'middle', 'class': 't-acc', 'data-fade': '', style: d(1) });
+    return s;
+  };
+
   /* SIMAKARA: a registration query at the top of an enrollment funnel. */
   V.simakara = function (w, h) {
     var s = svgRoot(w, h);
