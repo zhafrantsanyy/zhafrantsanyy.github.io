@@ -1,10 +1,10 @@
 # zhafrantsanyy.github.io
 
-Personal portfolio for **Muhammad Zhafran Tsany**, SEO strategist and automation builder based in Bekasi, Indonesia.
+Personal portfolio for **Muhammad Zhafran Tsany**, AI engineer (agentic systems and automation) based in Bekasi, Indonesia.
 
 Live at **https://zhafrantsanyy.github.io**
 
-> Organic growth, engineered.
+> AI agents, engineered.
 
 ## What's on the page
 
@@ -12,11 +12,11 @@ Live at **https://zhafrantsanyy.github.io**
 | --- | --- | --- |
 | 01 | Hero | Kinetic headline over a live **rank tracker**: every line is a keyword cluster from a case study. Hover a line to see the cluster, click it to open the case. |
 | 02 | About | A statement that lights up word by word as you scroll, portrait with a clip reveal and parallax, facts and skills |
-| 03 | Selected work | Eight case studies (nine brands). On desktop a preview card follows the cursor; every row opens a full case study with its own animated chart |
+| 03 | Selected work | Nine case studies (nine brands), led by a multi-agent platform behind a policy gateway. On desktop a preview card follows the cursor; every row opens a full case study with its own animated chart |
 | 04 | The engine | A pinned, scroll-driven walkthrough of the programmatic content engine, with a live simulation: drafts flow through the quality gate, failures loop back for a rewrite |
 | 05 | Shipped | The four public repositories as stacking cards, each with generative artwork |
 | 06 | Experience | Expandable timeline with a scroll-linked progress rail |
-| 07 | Capabilities | What I do, plus translation, localization and outreach work |
+| 07 | Capabilities | AI agents, evals, automation, full stack and growth, plus translation, localization and outreach work |
 | 08 | Impact | Odometer counters and the CV download |
 | 09 | Contact | Email, WhatsApp, LinkedIn, GitHub, copy-to-clipboard |
 

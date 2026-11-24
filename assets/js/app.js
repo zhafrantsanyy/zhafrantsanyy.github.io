@@ -339,7 +339,7 @@
   safe('preview', function () {
     var pv = $('#pv'), reel = $('#pvReel'), list = $('#cases');
     if (!pv || !list || !ZT.finePointer) return;
-    var PRIMARY = { trading: 1, tembuni: 1, traveloka: 1, hashmicro: 0, property: 0, agriculture: 0, agency: 0, simakara: 2 };
+    var PRIMARY = { agents: 0, trading: 1, tembuni: 1, traveloka: 1, hashmicro: 0, property: 0, agriculture: 0, agency: 0, simakara: 2 };
     var slides = CASES.map(function (c) {
       var sl = document.createElement('div');
       sl.className = 'pv-slide';
@@ -580,18 +580,18 @@
       indexed = true;
       [
         ['about', 'About', 'Bio, facts and skills', 'profile bio skills education languages bekasi', true],
-        ['work', 'Selected work', 'Nine brands, eight case studies', 'case studies portfolio clients results', true],
+        ['work', 'Selected work', 'Nine brands, nine case studies', 'case studies portfolio clients results ai agents automation', true],
         ['engine', 'The engine', 'A live simulation of the programmatic content pipeline', 'programmatic seo automation pipeline quality gate simulation', true],
         ['shipped', 'Shipped', 'Four public repositories', 'projects github repositories code n8n next.js supabase'],
         ['experience', 'Experience', 'Roles from 2022 to 2026', 'timeline jobs career history', true],
-        ['capabilities', 'Capabilities', 'What I do, plus adjacent work', 'services skills translation localization outreach kol'],
+        ['capabilities', 'Capabilities', 'What I do, plus adjacent work', 'services skills ai agents mcp llm evals automation translation localization outreach kol'],
         ['impact', 'Impact', 'The numbers, plus the CV download', 'results metrics numbers'],
         ['contact', 'Contact', 'Email, WhatsApp, LinkedIn, GitHub', 'hire email reach message', true]
       ].forEach(function (s) {
         add({ kind: 'Section', title: s[1], sub: s[2], kw: s[3], suggest: !!s[4], run: function () { var t = document.getElementById(s[0]); if (t) ZT.scrollTo(t); } });
       });
       CASES.forEach(function (c) {
-        add({ kind: 'Case', title: c.name, sub: c.sector + ' · ' + c.metric, kw: c.body.textContent, suggest: c.id === 'tembuni' || c.id === 'trading',
+        add({ kind: 'Case', title: c.name, sub: c.sector + ' · ' + c.metric, kw: c.body.textContent, suggest: c.id === 'agents' || c.id === 'tembuni' || c.id === 'trading',
           run: function () { openCase(c.id); } });
       });
       $$('.card').forEach(function (card) {
